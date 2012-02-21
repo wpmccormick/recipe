@@ -1,0 +1,137 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBD_SQLite_st {
+	label="DBD::SQLite::st";
+	"DBD::SQLite::st::_prepare";
+}
+subgraph cluster_locale {
+	label="locale";
+	"locale::import";
+}
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_DBI {
+	label="DBI";
+	"DBI::_new_dbh";
+	"DBI::install_driver";
+	"DBI::_new_sth";
+	"DBI::setup_driver";
+	"DBI::_new_drh";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@18";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBD_SQLite_dr {
+	label="DBD::SQLite::dr";
+	"DBD::SQLite::dr::connect";
+	"DBD::SQLite::dr::BEGIN@178";
+	"DBD::SQLite::dr::CORE:match";
+}
+subgraph cluster_DBI_db {
+	label="DBI::db";
+	"DBI::db::sqlite_create_function";
+	"DBI::db::sqlite_collation_needed";
+	"DBI::db::sqlite_register_fts3_perl_tokenizer";
+	"DBI::db::prepare";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@9";
+	"DBD::SQLite::BEGIN@3";
+	"DBD::SQLite::BEGIN@34";
+	"DBD::SQLite::bootstrap";
+	"DBD::SQLite::BEGIN@4";
+	"DBD::SQLite::BEGIN@10";
+	"DBD::SQLite::BEGIN@6";
+	"DBD::SQLite::BEGIN@12";
+	"DBD::SQLite::BEGIN@30";
+	"DBD::SQLite::driver";
+	"DBD::SQLite::BEGIN@8";
+	"DBD::SQLite::BEGIN@5";
+}
+subgraph cluster_DBD_SQLite_db {
+	label="DBD::SQLite::db";
+	"DBD::SQLite::db::prepare";
+	"DBD::SQLite::db::_login";
+}
+subgraph cluster_DBD_SQLite__WriteOnceHash {
+	label="DBD::SQLite::_WriteOnceHash";
+	"DBD::SQLite::_WriteOnceHash::STORE";
+	"DBD::SQLite::_WriteOnceHash::TIEHASH";
+}
+subgraph cluster_DBI_dr {
+	label="DBI::dr";
+	"DBI::dr::connect";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+	"constant::BEGIN@4";
+	"constant::BEGIN@3";
+	"constant::BEGIN@38";
+	"constant::BEGIN@101";
+	"constant::BEGIN@2";
+	"constant::BEGIN@6";
+}
+subgraph cluster_DBD___common {
+	label="DBD::_::common";
+	"DBD::_::common::install_method";
+}
+"DBD::SQLite::dr::connect" -> "DBI::db::sqlite_collation_needed";
+"DBD::SQLite::BEGIN@34" -> "locale::import";
+"DBD::SQLite::dr::BEGIN@178" -> "locale::import";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@2";
+"DBD::SQLite::db::prepare" -> "DBI::_new_sth";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@4";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@6";
+"DBD::SQLite::BEGIN@30" -> "constant::import";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@9";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@34";
+"DBD::SQLite::db::prepare" -> "DBD::SQLite::st::_prepare";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@12";
+"DBD::SQLite::dr::connect" -> "DBD::SQLite::dr::CORE:match";
+"DBD::SQLite::dr::connect" -> "DBI::db::sqlite_create_function";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@4";
+"DBD::SQLite::driver" -> "DBD::_::common::install_method";
+"DBD::SQLite::dr::connect" -> "DBI::_new_dbh";
+"DBI::install_driver" -> "DBD::SQLite::driver";
+"DBD::SQLite::driver" -> "DBI::_new_drh";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@8";
+"main::BEGIN@18" -> "DBD::SQLite::dr::BEGIN@178";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@38";
+"DBD::SQLite::dr::connect" -> "DBD::SQLite::db::_login";
+"DBI::db::prepare" -> "DBD::SQLite::db::prepare";
+"DBD::SQLite::dr::connect" -> "DBI::db::sqlite_register_fts3_perl_tokenizer";
+"DBD::SQLite::BEGIN@9" -> "vars::import";
+"DBD::SQLite::BEGIN@10" -> "vars::import";
+"DBD::SQLite::BEGIN@8" -> "vars::import";
+"DynaLoader::bootstrap" -> "DBD::SQLite::bootstrap";
+"main::BEGIN@18" -> "DBD::SQLite::_WriteOnceHash::TIEHASH";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@5";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@3";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@3";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@10";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@6";
+"DBD::SQLite::driver" -> "DBI::setup_driver";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@30";
+"DBI::dr::connect" -> "DBD::SQLite::dr::connect";
+"main::BEGIN@18" -> "DBD::SQLite::_WriteOnceHash::STORE";
+"DBD::SQLite::BEGIN@5" -> "UNIVERSAL::VERSION";
+"DBD::SQLite::BEGIN@4" -> "strict::import";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@101";
+}

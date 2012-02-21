@@ -1,0 +1,308 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBD_SQLite_st {
+	label="DBD::SQLite::st";
+	"DBD::SQLite::st::_prepare";
+}
+subgraph cluster_Internals {
+	label="Internals";
+	"Internals::SvREADONLY";
+}
+subgraph cluster_Config {
+	label="Config";
+	"Config::FETCH";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@11";
+	"List::Util::BEGIN@12";
+}
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::BEGIN@17";
+	"DynaLoader::BEGIN@24";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_DBI {
+	label="DBI";
+	"DBI::__ANON__[DBI.pm:732]";
+	"DBI::BEGIN@163";
+	"DBI::BEGIN@160";
+	"DBI::BEGIN@804";
+	"DBI::BEGIN@534";
+	"DBI::BEGIN@161";
+	"DBI::BEGIN@159";
+	"DBI::BEGIN@276";
+	"DBI::setup_driver";
+	"DBI::BEGIN@1035";
+	"DBI::BEGIN@964";
+	"DBI::BEGIN@691";
+	"DBI::BEGIN@272";
+	"DBI::_install_method";
+	"DBI::disconnect_all";
+	"DBI::BEGIN@867";
+	"DBI::BEGIN@838";
+	"DBI::connect";
+}
+subgraph cluster_Tie_Hash {
+	label="Tie::Hash";
+	"Tie::Hash::BEGIN@5";
+	"Tie::Hash::BEGIN@6";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@17";
+	"main::BEGIN@11.1";
+	"main::NULL";
+	"main::BEGIN@18";
+	"main::BEGIN@3";
+	"main::CORE:print";
+	"main::BEGIN@5";
+	"main::RUNTIME";
+	"main::BEGIN@11";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::CORE:regcomp";
+	"strict::bits";
+	"strict::CORE:match";
+}
+subgraph cluster_DBD_SQLite_dr {
+	label="DBD::SQLite::dr";
+	"DBD::SQLite::dr::connect";
+	"DBD::SQLite::dr::BEGIN@178";
+}
+subgraph cluster_DBI_common {
+	label="DBI::common";
+	"DBI::common::DESTROY";
+	"DBI::common::STORE";
+	"DBI::common::FETCH";
+}
+subgraph cluster_DBI_db {
+	label="DBI::db";
+	"DBI::db::connected";
+	"DBI::db::sqlite_create_function";
+	"DBI::db::sqlite_collation_needed";
+	"DBI::db::sqlite_register_fts3_perl_tokenizer";
+	"DBI::db::selectall_arrayref";
+	"DBI::db::prepare";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::BEGIN@9";
+	"Scalar::Util::BEGIN@10";
+	"Scalar::Util::weaken";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@9";
+	"DBD::SQLite::BEGIN@3";
+	"DBD::SQLite::BEGIN@34";
+	"DBD::SQLite::BEGIN@4";
+	"DBD::SQLite::BEGIN@10";
+	"DBD::SQLite::BEGIN@6";
+	"DBD::SQLite::BEGIN@12";
+	"DBD::SQLite::BEGIN@30";
+	"DBD::SQLite::BEGIN@8";
+	"DBD::SQLite::BEGIN@5";
+}
+subgraph cluster_DBD_SQLite_db {
+	label="DBD::SQLite::db";
+	"DBD::SQLite::db::prepare";
+}
+subgraph cluster_DBD___st {
+	label="DBD::_::st";
+	"DBD::_::st::BEGIN@1817";
+	"DBD::_::st::fetchall_arrayref";
+}
+subgraph cluster_DBI_var {
+	label="DBI::var";
+	"DBI::var::TIESCALAR";
+}
+subgraph cluster_DBD___dr {
+	label="DBD::_::dr";
+	"DBD::_::dr::BEGIN@1450";
+	"DBD::_::dr::default_user";
+}
+subgraph cluster_DBI_DBI_tie {
+	label="DBI::DBI_tie";
+	"DBI::DBI_tie::TIEHASH";
+}
+subgraph cluster_DBD_SQLite__WriteOnceHash {
+	label="DBD::SQLite::_WriteOnceHash";
+	"DBD::SQLite::_WriteOnceHash::STORE";
+	"DBD::SQLite::_WriteOnceHash::TIEHASH";
+}
+subgraph cluster_version {
+	label="version";
+	"version::(bool";
+	"version::(cmp";
+}
+subgraph cluster_DBI_dr {
+	label="DBI::dr";
+	"DBI::dr::disconnect_all";
+	"DBI::dr::default_user";
+	"DBI::dr::connect";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+}
+subgraph cluster_Time_HiRes {
+	label="Time::HiRes";
+	"Time::HiRes::BEGIN@4";
+	"Time::HiRes::BEGIN@3";
+	"Time::HiRes::import";
+	"Time::HiRes::BEGIN@43";
+	"Time::HiRes::clock";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_DBD___common {
+	label="DBD::_::common";
+	"DBD::_::common::BEGIN@1348";
+}
+subgraph cluster_DBD___db {
+	label="DBD::_::db";
+	"DBD::_::db::BEGIN@1511";
+	"DBD::_::db::selectall_arrayref";
+}
+subgraph cluster_DBD__mem_common {
+	label="DBD::_mem::common";
+	"DBD::_mem::common::DESTROY";
+}
+subgraph cluster_DBI_st {
+	label="DBI::st";
+	"DBI::st::fetchall_arrayref";
+	"DBI::st::fetch";
+	"DBI::st::execute";
+	"DBI::st::fetchrow_hashref";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::method_changed_in";
+}
+subgraph cluster_AutoLoader {
+	label="AutoLoader";
+	"AutoLoader::BEGIN@138";
+	"AutoLoader::BEGIN@30";
+	"AutoLoader::BEGIN@4";
+	"AutoLoader::BEGIN@186";
+	"AutoLoader::BEGIN@3";
+	"AutoLoader::BEGIN@13";
+}
+"main::BEGIN@5" -> "AutoLoader::BEGIN@138";
+"DBD::SQLite::dr::connect" -> "DBI::db::sqlite_collation_needed";
+"main::BEGIN@17" -> "DBI::BEGIN@160";
+"main::RUNTIME" -> "DBI::db::selectall_arrayref";
+"DBD::_::db::selectall_arrayref" -> "DBI::st::fetchall_arrayref";
+"DBI::__ANON__[DBI.pm:732]" -> "DBI::db::connected";
+"main::BEGIN@5" -> "Time::HiRes::BEGIN@4";
+"constant::import" -> "mro::method_changed_in";
+"DBI::dr::default_user" -> "DBD::_::dr::default_user";
+"main::RUNTIME" -> "main::BEGIN@3";
+"main::BEGIN@17" -> "Scalar::Util::weaken";
+"main::BEGIN@5" -> "AutoLoader::BEGIN@3";
+"main::BEGIN@3" -> "strict::CORE:match";
+"main::BEGIN@17" -> "DBI::BEGIN@964";
+"DBD::_::st::fetchall_arrayref" -> "DBI::st::fetchrow_hashref";
+"main::RUNTIME" -> "main::BEGIN@17";
+"main::NULL" -> "DBD::_mem::common::DESTROY";
+"DBD::_::db::selectall_arrayref" -> "DBD::_mem::common::DESTROY";
+"main::BEGIN@11" -> "Time::HiRes::clock";
+"main::BEGIN@3" -> "strict::bits";
+"main::BEGIN@17" -> "DBI::DBI_tie::TIEHASH";
+"main::BEGIN@17" -> "Exporter::import";
+"DBI::connect" -> "DBI::dr::default_user";
+"main::BEGIN@17" -> "DBD::_::common::BEGIN@1348";
+"main::BEGIN@17" -> "List::Util::BEGIN@12";
+"main::BEGIN@5" -> "AutoLoader::BEGIN@4";
+"main::BEGIN@18" -> "DynaLoader::bootstrap";
+"main::BEGIN@5" -> "DynaLoader::bootstrap";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@9";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@34";
+"main::BEGIN@17" -> "DBI::BEGIN@804";
+"main::BEGIN@17" -> "DBI::BEGIN@161";
+"DBD::SQLite::db::prepare" -> "DBD::SQLite::st::_prepare";
+"DBI::disconnect_all" -> "DBI::dr::disconnect_all";
+"main::BEGIN@18" -> "Tie::Hash::BEGIN@5";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@12";
+"DBI::setup_driver" -> "UNIVERSAL::isa";
+"main::BEGIN@5" -> "Time::HiRes::import";
+"main::BEGIN@3" -> "strict::CORE:regcomp";
+"main::BEGIN@17" -> "DBI::var::TIESCALAR";
+"main::BEGIN@17" -> "Scalar::Util::BEGIN@10";
+"DBD::_::db::selectall_arrayref" -> "DBI::db::prepare";
+"main::BEGIN@17" -> "List::Util::BEGIN@11";
+"DBD::SQLite::dr::connect" -> "DBI::db::sqlite_create_function";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@4";
+"DynaLoader::BEGIN@24" -> "version::(bool";
+"main::BEGIN@17" -> "DBI::BEGIN@272";
+"main::BEGIN@17" -> "DBD::_::st::BEGIN@1817";
+"DBI::db::selectall_arrayref" -> "DBD::_::db::selectall_arrayref";
+"constant::import" -> "Internals::SvREADONLY";
+"main::BEGIN@17" -> "DBI::_install_method";
+"DBI::st::fetchrow_hashref" -> "DBI::st::fetch";
+"main::BEGIN@18" -> "Tie::Hash::BEGIN@6";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@8";
+"main::BEGIN@18" -> "DBD::SQLite::dr::BEGIN@178";
+"main::BEGIN@17" -> "DBD::_::dr::BEGIN@1450";
+"main::BEGIN@17" -> "DBD::_::db::BEGIN@1511";
+"main::BEGIN@5" -> "DynaLoader::BEGIN@24";
+"main::BEGIN@17" -> "DBI::BEGIN@163";
+"main::BEGIN@5" -> "AutoLoader::BEGIN@186";
+"DBI::db::prepare" -> "DBD::SQLite::db::prepare";
+"DBD::SQLite::dr::connect" -> "DBI::db::sqlite_register_fts3_perl_tokenizer";
+"main::BEGIN@17" -> "DBI::BEGIN@691";
+"DynaLoader::BEGIN@24" -> "version::(cmp";
+"DBI::st::fetchrow_hashref" -> "DBI::common::FETCH";
+"main::BEGIN@17" -> "main::BEGIN@11.1";
+"main::BEGIN@18" -> "DBD::SQLite::_WriteOnceHash::TIEHASH";
+"main::BEGIN@11" -> "main::CORE:print";
+"main::BEGIN@17" -> "DBI::BEGIN@838";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@5";
+"main::BEGIN@5" -> "DynaLoader::BEGIN@17";
+"main::BEGIN@17" -> "Scalar::Util::BEGIN@9";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@3";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@10";
+"main::BEGIN@17" -> "DBI::BEGIN@534";
+"DBI::__ANON__[DBI.pm:732]" -> "DBI::dr::connect";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@6";
+"main::BEGIN@17" -> "DBI::BEGIN@159";
+"main::BEGIN@17" -> "DBI::setup_driver";
+"main::BEGIN@17" -> "DBI::BEGIN@276";
+"main::BEGIN@5" -> "Time::HiRes::BEGIN@3";
+"main::BEGIN@17" -> "DBI::BEGIN@1035";
+"main::BEGIN@18" -> "DBD::SQLite::BEGIN@30";
+"main::RUNTIME" -> "main::BEGIN@18";
+"main::RUNTIME" -> "main::BEGIN@5";
+"main::NULL" -> "DBI::common::DESTROY";
+"DBD::_::db::selectall_arrayref" -> "DBI::common::DESTROY";
+"DBI::dr::connect" -> "DBD::SQLite::dr::connect";
+"main::BEGIN@17" -> "XSLoader::load";
+"DBD::_::db::selectall_arrayref" -> "DBI::st::execute";
+"main::BEGIN@5" -> "AutoLoader::BEGIN@13";
+"main::BEGIN@5" -> "Config::FETCH";
+"main::BEGIN@5" -> "Time::HiRes::BEGIN@43";
+"main::BEGIN@18" -> "DBD::SQLite::_WriteOnceHash::STORE";
+"DBD::SQLite::BEGIN@5" -> "UNIVERSAL::VERSION";
+"main::BEGIN@3" -> "strict::import";
+"main::BEGIN@5" -> "AutoLoader::BEGIN@30";
+"main::BEGIN@17" -> "DBI::BEGIN@867";
+"DBI::st::fetchall_arrayref" -> "DBD::_::st::fetchall_arrayref";
+"main::RUNTIME" -> "main::BEGIN@11";
+"DBI::__ANON__[DBI.pm:732]" -> "DBI::common::STORE";
+"DBI::connect" -> "DBI::common::STORE";
+}

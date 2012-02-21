@@ -1,0 +1,174 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_ResultSourceProxy_Table {
+	label="DBIx::Class::ResultSourceProxy::Table";
+	"DBIx::Class::ResultSourceProxy::Table::table";
+}
+subgraph cluster_DBIx_Class_AccessorGroup {
+	label="DBIx::Class::AccessorGroup";
+	"DBIx::Class::AccessorGroup::get_component_class";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_Storage_DBIHacks {
+	label="DBIx::Class::Storage::DBIHacks";
+	"DBIx::Class::Storage::DBIHacks::_resolve_ident_sources";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::result_source";
+	"DBIx::Class::ResultSet::_result_class";
+}
+subgraph cluster_DBIx_Class_Storage {
+	label="DBIx::Class::Storage";
+	"DBIx::Class::Storage::set_schema";
+	"DBIx::Class::Storage::schema";
+	"DBIx::Class::Storage::debug";
+}
+subgraph cluster_Sub_Install {
+	label="Sub::Install";
+	"Sub::Install::_CODELIKE";
+}
+subgraph cluster_Class_Accessor_Grouped {
+	label="Class::Accessor::Grouped";
+	"Class::Accessor::Grouped::set_inherited";
+	"Class::Accessor::Grouped::__ANON__[Class/Accessor/Grouped.pm:810]";
+	"Class::Accessor::Grouped::_mk_group_accessors";
+	"Class::Accessor::Grouped::get_inherited";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::_register_source";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::_driver_determined";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1298]";
+	"DBIx::Class::Storage::DBI::_dbh";
+	"DBIx::Class::Storage::DBI::_dbh_autocommit";
+	"DBIx::Class::Storage::DBI::on_connect_do";
+	"DBIx::Class::Storage::DBI::_dbic_connect_attributes";
+	"DBIx::Class::Storage::DBI::on_connect_call";
+	"DBIx::Class::Storage::DBI::_arm_global_destructor";
+	"DBIx::Class::Storage::DBI::_dbh_details";
+	"DBIx::Class::Storage::DBI::_connect_info";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]";
+	"DBIx::Class::Storage::DBI::_dbi_connect_info";
+	"DBIx::Class::Storage::DBI::unsafe";
+	"DBIx::Class::Storage::DBI::_sql_maker";
+	"DBIx::Class::Storage::DBI::_gen_sql_bind";
+	"DBIx::Class::Storage::DBI::disable_sth_caching";
+	"DBIx::Class::Storage::DBI::_conn_pid";
+	"DBIx::Class::Storage::DBI::_sql_maker_opts";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@11";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::BEGIN@9";
+	"Scalar::Util::refaddr";
+	"Scalar::Util::reftype";
+	"Scalar::Util::blessed";
+	"Scalar::Util::BEGIN@10";
+	"Scalar::Util::weaken";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::_unique_constraints";
+	"DBIx::Class::ResultSource::column_info_from_storage";
+	"DBIx::Class::ResultSource::source_name";
+	"DBIx::Class::ResultSource::_columns";
+	"DBIx::Class::ResultSource::_primaries";
+	"DBIx::Class::ResultSource::_ordered_columns";
+	"DBIx::Class::ResultSource::name";
+	"DBIx::Class::ResultSource::_relationships";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_Cursor {
+	label="DBIx::Class::Storage::DBI::Cursor";
+	"DBIx::Class::Storage::DBI::Cursor::sth";
+}
+"DBIx::Class::Storage::DBI::_arm_global_destructor" -> "Scalar::Util::refaddr";
+"DBIx::Class::Storage::debug" -> "Scalar::Util::blessed";
+"Class::Accessor::Grouped::_mk_group_accessors" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::_relationships" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_dbh_autocommit" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::on_connect_do" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_dbic_connect_attributes" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::Cursor::sth" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::column_info_from_storage" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::_ordered_columns" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::_primaries" -> "Scalar::Util::blessed";
+"Class::Accessor::Grouped::__ANON__[Class/Accessor/Grouped.pm:810]" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_connect_info" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSet::_result_class" -> "Scalar::Util::blessed";
+"Class::Accessor::Grouped::get_inherited" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::_columns" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::source_name" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::schema" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::unsafe" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_gen_sql_bind" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::disable_sth_caching" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_sql_maker_opts" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_driver_determined" -> "Scalar::Util::blessed";
+"Class::Accessor::Grouped::set_inherited" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSourceProxy::Table::table" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_dbh" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSet::result_source" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::on_connect_call" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_dbh_details" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::_unique_constraints" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_dbi_connect_info" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_sql_maker" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBIHacks::_resolve_ident_sources" -> "Scalar::Util::blessed";
+"DBIx::Class::ResultSource::name" -> "Scalar::Util::blessed";
+"DBIx::Class::Storage::DBI::_conn_pid" -> "Scalar::Util::blessed";
+"Package::DeprecationManager::BEGIN@11" -> "Scalar::Util::BEGIN@9";
+"DBIx::Class::Storage::debug" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::_relationships" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1298]" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_dbh_autocommit" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::on_connect_do" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_dbic_connect_attributes" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::Cursor::sth" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::column_info_from_storage" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::_ordered_columns" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::_primaries" -> "Scalar::Util::weaken";
+"Class::Accessor::Grouped::__ANON__[Class/Accessor/Grouped.pm:810]" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_connect_info" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSet::_result_class" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::source_name" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::unsafe" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::_columns" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::schema" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::disable_sth_caching" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_sql_maker_opts" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_driver_determined" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_dbh" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::set_schema" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSet::result_source" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::on_connect_call" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_dbh_details" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_arm_global_destructor" -> "Scalar::Util::weaken";
+"DBIx::Class::Schema::_register_source" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::_unique_constraints" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_dbi_connect_info" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_sql_maker" -> "Scalar::Util::weaken";
+"DBIx::Class::AccessorGroup::get_component_class" -> "Scalar::Util::weaken";
+"DBIx::Class::ResultSource::name" -> "Scalar::Util::weaken";
+"DBIx::Class::Storage::DBI::_conn_pid" -> "Scalar::Util::weaken";
+"Class::Accessor::Grouped::set_inherited" -> "Scalar::Util::reftype";
+"Sub::Install::_CODELIKE" -> "Scalar::Util::reftype";
+"Class::Accessor::Grouped::get_inherited" -> "Scalar::Util::reftype";
+"Package::DeprecationManager::BEGIN@11" -> "Scalar::Util::BEGIN@10";
+"Scalar::Util::BEGIN@10" -> "vars::import";
+"Scalar::Util::BEGIN@9" -> "strict::import";
+}

@@ -1,0 +1,56 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Internals {
+	label="Internals";
+	"Internals::SvREADONLY";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@30";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+	"constant::BEGIN@4";
+	"constant::BEGIN@3";
+	"constant::BEGIN@38";
+	"constant::CORE:regcomp";
+	"constant::BEGIN@101";
+	"constant::BEGIN@2";
+	"constant::BEGIN@6";
+	"constant::CORE:match";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::method_changed_in";
+}
+"constant::import" -> "mro::method_changed_in";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@2";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@4";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@6";
+"DBD::SQLite::BEGIN@30" -> "constant::import";
+"constant::BEGIN@38" -> "strict::unimport";
+"constant::BEGIN@101" -> "strict::unimport";
+"constant::import" -> "constant::CORE:regcomp";
+"constant::import" -> "Internals::SvREADONLY";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@38";
+"constant::BEGIN@6" -> "vars::import";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@3";
+"constant::import" -> "constant::CORE:match";
+"constant::BEGIN@3" -> "strict::import";
+"DBD::SQLite::BEGIN@30" -> "constant::BEGIN@101";
+"constant::BEGIN@4" -> "warnings::register::import";
+}

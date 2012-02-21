@@ -1,0 +1,22 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Package_Stash_XS {
+	label="Package::Stash::XS";
+	"Package::Stash::XS::new";
+}
+subgraph cluster_utf8 {
+	label="utf8";
+	"utf8::AUTOLOAD";
+	"utf8::BEGIN@211";
+	"utf8::BEGIN@2";
+	"utf8::BEGIN@76";
+	"utf8::BEGIN@155";
+	"utf8::BEGIN@3";
+}
+"utf8::AUTOLOAD" -> "utf8::BEGIN@3";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@76";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@211";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@155";
+"Package::Stash::XS::new" -> "utf8::AUTOLOAD";
+"utf8::AUTOLOAD" -> "utf8::BEGIN@2";
+}

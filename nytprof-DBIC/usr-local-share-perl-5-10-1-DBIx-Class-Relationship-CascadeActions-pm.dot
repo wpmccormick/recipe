@@ -1,0 +1,31 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_DBIx_Class_Relationship_CascadeActions {
+	label="DBIx::Class::Relationship::CascadeActions";
+	"DBIx::Class::Relationship::CascadeActions::BEGIN@4";
+	"DBIx::Class::Relationship::CascadeActions::BEGIN@6";
+	"DBIx::Class::Relationship::CascadeActions::BEGIN@5";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_Carp {
+	label="DBIx::Class::Carp";
+	"DBIx::Class::Carp::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::CascadeActions::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::CascadeActions::BEGIN@6";
+"DBIx::Class::Relationship::CascadeActions::BEGIN@6" -> "DBIx::Class::Carp::import";
+"DBIx::Class::Relationship::CascadeActions::BEGIN@5" -> "warnings::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::CascadeActions::BEGIN@5";
+"DBIx::Class::Relationship::CascadeActions::BEGIN@4" -> "strict::import";
+}

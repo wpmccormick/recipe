@@ -1,0 +1,31 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_PK_Auto {
+	label="DBIx::Class::PK::Auto";
+	"DBIx::Class::PK::Auto::BEGIN@4";
+	"DBIx::Class::PK::Auto::BEGIN@5";
+	"DBIx::Class::PK::Auto::BEGIN@6";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::Auto::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::Auto::BEGIN@5";
+"DBIx::Class::PK::Auto::BEGIN@4" -> "base::import";
+"DBIx::Class::PK::Auto::BEGIN@6" -> "warnings::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::Auto::BEGIN@4";
+"DBIx::Class::PK::Auto::BEGIN@5" -> "strict::import";
+}

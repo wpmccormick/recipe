@@ -1,0 +1,528 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_ResultSourceProxy_Table {
+	label="DBIx::Class::ResultSourceProxy::Table";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@10";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@8";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@3";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@6";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@4";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@9";
+	"DBIx::Class::ResultSourceProxy::Table::table";
+}
+subgraph cluster_FibeRio_Schema_Result_Substrate {
+	label="FibeRio::Schema::Result::Substrate";
+	"FibeRio::Schema::Result::Substrate::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_Relationship_Accessor {
+	label="DBIx::Class::Relationship::Accessor";
+	"DBIx::Class::Relationship::Accessor::BEGIN@72";
+	"DBIx::Class::Relationship::Accessor::BEGIN@4";
+	"DBIx::Class::Relationship::Accessor::BEGIN@6";
+	"DBIx::Class::Relationship::Accessor::BEGIN@73";
+	"DBIx::Class::Relationship::Accessor::BEGIN@5";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeSpin {
+	label="FibeRio::Schema::Result::RecipeSpin";
+	"FibeRio::Schema::Result::RecipeSpin::BEGIN@3";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeSolution {
+	label="FibeRio::Schema::Result::RecipeSolution";
+	"FibeRio::Schema::Result::RecipeSolution::BEGIN@3";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_DBIx_Class_AccessorGroup {
+	label="DBIx::Class::AccessorGroup";
+	"DBIx::Class::AccessorGroup::get_component_class";
+}
+subgraph cluster_DBIx_Class_Relationship_CascadeActions {
+	label="DBIx::Class::Relationship::CascadeActions";
+	"DBIx::Class::Relationship::CascadeActions::BEGIN@4";
+	"DBIx::Class::Relationship::CascadeActions::BEGIN@6";
+	"DBIx::Class::Relationship::CascadeActions::BEGIN@5";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeSubstrate {
+	label="FibeRio::Schema::Result::RecipeSubstrate";
+	"FibeRio::Schema::Result::RecipeSubstrate::BEGIN@3";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltZone {
+	label="FibeRio::Schema::Result::MeltZone";
+	"FibeRio::Schema::Result::MeltZone::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::result_class";
+}
+subgraph cluster_DBIx_Class_Storage {
+	label="DBIx::Class::Storage";
+	"DBIx::Class::Storage::cursor_class";
+}
+subgraph cluster_DBIx_Class_Componentised {
+	label="DBIx::Class::Componentised";
+	"DBIx::Class::Componentised::inject_base";
+}
+subgraph cluster_DBIx_Class_PK_Auto {
+	label="DBIx::Class::PK::Auto";
+	"DBIx::Class::PK::Auto::BEGIN@4";
+	"DBIx::Class::PK::Auto::BEGIN@5";
+	"DBIx::Class::PK::Auto::BEGIN@6";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeMeltTemp {
+	label="FibeRio::Schema::Result::RecipeMeltTemp";
+	"FibeRio::Schema::Result::RecipeMeltTemp::BEGIN@3";
+}
+subgraph cluster_DBIx_Class {
+	label="DBIx::Class";
+	"DBIx::Class::mk_classdata";
+	"DBIx::Class::component_base_class";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::add_columns";
+	"DBIx::Class::ResultSourceProxy::set_primary_key";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltTemp {
+	label="FibeRio::Schema::Result::MeltTemp";
+	"FibeRio::Schema::Result::MeltTemp::BEGIN@3";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::inject_base";
+	"Class::C3::Componentised::load_own_components";
+	"Class::C3::Componentised::BEGIN@50";
+	"Class::C3::Componentised::BEGIN@51";
+	"Class::C3::Componentised::load_optional_class";
+	"Class::C3::Componentised::CORE:match";
+	"Class::C3::Componentised::BEGIN@41";
+	"Class::C3::Componentised::ensure_class_loaded";
+	"Class::C3::Componentised::BEGIN@133";
+	"Class::C3::Componentised::__ANON__[Class/C3/Componentised.pm:199]";
+	"Class::C3::Componentised::load_components";
+	"Class::C3::Componentised::BEGIN@198";
+	"Class::C3::Componentised::BEGIN@40";
+	"Class::C3::Componentised::CORE:qr";
+	"Class::C3::Componentised::_load_components";
+	"Class::C3::Componentised::BEGIN@48";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::get_linear_isa";
+	"mro::set_mro";
+}
+subgraph cluster_FibeRio_Schema_Result_FanGroup {
+	label="FibeRio::Schema::Result::FanGroup";
+	"FibeRio::Schema::Result::FanGroup::BEGIN@3";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeMeltPump {
+	label="FibeRio::Schema::Result::RecipeMeltPump";
+	"FibeRio::Schema::Result::RecipeMeltPump::BEGIN@3";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::first";
+}
+subgraph cluster_FibeRio_Schema_Result_Solution {
+	label="FibeRio::Schema::Result::Solution";
+	"FibeRio::Schema::Result::Solution::BEGIN@3";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltPump {
+	label="FibeRio::Schema::Result::MeltPump";
+	"FibeRio::Schema::Result::MeltPump::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_SQLite {
+	label="DBIx::Class::Storage::DBI::SQLite";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@4";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@6";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@3";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@11";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@10";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@9";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Relationship_ProxyMethods {
+	label="DBIx::Class::Relationship::ProxyMethods";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@25";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@5";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@26";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@6";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@4";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@7";
+}
+subgraph cluster_Class_Accessor_Grouped {
+	label="Class::Accessor::Grouped";
+	"Class::Accessor::Grouped::mk_group_accessors";
+}
+subgraph cluster_FibeRio_Schema_Result_Spin {
+	label="FibeRio::Schema::Result::Spin";
+	"FibeRio::Schema::Result::Spin::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:829]";
+	"DBIx::Class::Schema::load_namespaces";
+}
+subgraph cluster_DBIx_Class_Relationship_BelongsTo {
+	label="DBIx::Class::Relationship::BelongsTo";
+	"DBIx::Class::Relationship::BelongsTo::belongs_to";
+	"DBIx::Class::Relationship::BelongsTo::BEGIN@10";
+	"DBIx::Class::Relationship::BelongsTo::BEGIN@9";
+	"DBIx::Class::Relationship::BelongsTo::BEGIN@7";
+	"DBIx::Class::Relationship::BelongsTo::BEGIN@8";
+}
+subgraph cluster_Sub_Name {
+	label="Sub::Name";
+	"Sub::Name::subname";
+}
+subgraph cluster_FibeRio_Schema_Result_Fan {
+	label="FibeRio::Schema::Result::Fan";
+	"FibeRio::Schema::Result::Fan::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_InflateColumn {
+	label="DBIx::Class::InflateColumn";
+	"DBIx::Class::InflateColumn::BEGIN@3";
+	"DBIx::Class::InflateColumn::BEGIN@4";
+	"DBIx::Class::InflateColumn::BEGIN@6";
+}
+subgraph cluster_DBIx_Class_Relationship_HasOne {
+	label="DBIx::Class::Relationship::HasOne";
+	"DBIx::Class::Relationship::HasOne::BEGIN@6";
+	"DBIx::Class::Relationship::HasOne::BEGIN@8";
+	"DBIx::Class::Relationship::HasOne::BEGIN@7";
+	"DBIx::Class::Relationship::HasOne::BEGIN@5";
+	"DBIx::Class::Relationship::HasOne::BEGIN@4";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::BEGIN@16";
+	"DBIx::Class::Storage::DBI::BEGIN@10";
+	"DBIx::Class::Storage::DBI::sql_limit_dialect";
+	"DBIx::Class::Storage::DBI::BEGIN@15";
+	"DBIx::Class::Storage::DBI::sql_maker_class";
+	"DBIx::Class::Storage::DBI::BEGIN@1407";
+	"DBIx::Class::Storage::DBI::BEGIN@5";
+	"DBIx::Class::Storage::DBI::BEGIN@110";
+	"DBIx::Class::Storage::DBI::BEGIN@4";
+	"DBIx::Class::Storage::DBI::datetime_parser_type";
+	"DBIx::Class::Storage::DBI::BEGIN@14";
+	"DBIx::Class::Storage::DBI::BEGIN@17";
+	"DBIx::Class::Storage::DBI::_use_join_optimizer";
+	"DBIx::Class::Storage::DBI::BEGIN@12";
+	"DBIx::Class::Storage::DBI::BEGIN@8";
+	"DBIx::Class::Storage::DBI::BEGIN@7";
+	"DBIx::Class::Storage::DBI::sql_name_sep";
+	"DBIx::Class::Storage::DBI::BEGIN@13";
+	"DBIx::Class::Storage::DBI::sql_quote_char";
+	"DBIx::Class::Storage::DBI::BEGIN@11";
+	"DBIx::Class::Storage::DBI::_determine_driver";
+	"DBIx::Class::Storage::DBI::BEGIN@109";
+}
+subgraph cluster_FibeRio_Schema_Result_Recipe {
+	label="FibeRio::Schema::Result::Recipe";
+	"FibeRio::Schema::Result::Recipe::BEGIN@3";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+	"UNIVERSAL::can";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeFan {
+	label="FibeRio::Schema::Result::RecipeFan";
+	"FibeRio::Schema::Result::RecipeFan::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_PK {
+	label="DBIx::Class::PK";
+	"DBIx::Class::PK::BEGIN@3";
+	"DBIx::Class::PK::BEGIN@6";
+	"DBIx::Class::PK::BEGIN@4";
+}
+subgraph cluster_DBIx_Class_Relationship_ManyToMany {
+	label="DBIx::Class::Relationship::ManyToMany";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@4";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@5";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@8";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@31";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@11";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@9";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@30";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::BEGIN@6";
+	"DBIx::Class::ResultSource::BEGIN@14";
+	"DBIx::Class::ResultSource::BEGIN@13";
+	"DBIx::Class::ResultSource::BEGIN@10";
+	"DBIx::Class::ResultSource::BEGIN@16";
+	"DBIx::Class::ResultSource::BEGIN@3";
+	"DBIx::Class::ResultSource::BEGIN@11";
+	"DBIx::Class::ResultSource::BEGIN@4";
+	"DBIx::Class::ResultSource::BEGIN@9";
+	"DBIx::Class::ResultSource::BEGIN@7";
+	"DBIx::Class::ResultSource::BEGIN@12";
+}
+subgraph cluster_DBIx_Class_Relationship_Base {
+	label="DBIx::Class::Relationship::Base";
+	"DBIx::Class::Relationship::Base::BEGIN@8";
+	"DBIx::Class::Relationship::Base::BEGIN@9";
+	"DBIx::Class::Relationship::Base::BEGIN@4";
+	"DBIx::Class::Relationship::Base::BEGIN@10";
+	"DBIx::Class::Relationship::Base::BEGIN@3";
+	"DBIx::Class::Relationship::Base::BEGIN@6";
+}
+subgraph cluster_DBIx_Class_Relationship {
+	label="DBIx::Class::Relationship";
+	"DBIx::Class::Relationship::BEGIN@6";
+	"DBIx::Class::Relationship::BEGIN@3";
+	"DBIx::Class::Relationship::BEGIN@4";
+}
+subgraph cluster_DBIx_Class_Relationship_Helpers {
+	label="DBIx::Class::Relationship::Helpers";
+	"DBIx::Class::Relationship::Helpers::BEGIN@7";
+	"DBIx::Class::Relationship::Helpers::BEGIN@5";
+	"DBIx::Class::Relationship::Helpers::BEGIN@4";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeFanGroup {
+	label="FibeRio::Schema::Result::RecipeFanGroup";
+	"FibeRio::Schema::Result::RecipeFanGroup::BEGIN@3";
+}
+subgraph cluster_MRO_Compat {
+	label="MRO::Compat";
+	"MRO::Compat::BEGIN@2";
+	"MRO::Compat::BEGIN@225";
+	"MRO::Compat::BEGIN@116";
+	"MRO::Compat::BEGIN@39";
+	"MRO::Compat::BEGIN@256";
+	"MRO::Compat::BEGIN@3";
+	"MRO::Compat::BEGIN@10";
+	"MRO::Compat::__ANON__[MRO/Compat.pm:41]";
+	"MRO::Compat::BEGIN@226";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_Cursor {
+	label="DBIx::Class::Storage::DBI::Cursor";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@6";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@3";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@8";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@9";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@4";
+}
+subgraph cluster_DBIx_Class_SQLMaker_SQLite {
+	label="DBIx::Class::SQLMaker::SQLite";
+	"DBIx::Class::SQLMaker::SQLite::BEGIN@4";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeMeltZone {
+	label="FibeRio::Schema::Result::RecipeMeltZone";
+	"FibeRio::Schema::Result::RecipeMeltZone::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_Relationship_HasMany {
+	label="DBIx::Class::Relationship::HasMany";
+	"DBIx::Class::Relationship::HasMany::BEGIN@5";
+	"DBIx::Class::Relationship::HasMany::has_many";
+	"DBIx::Class::Relationship::HasMany::BEGIN@4";
+	"DBIx::Class::Relationship::HasMany::BEGIN@6";
+	"DBIx::Class::Relationship::HasMany::BEGIN@7";
+}
+subgraph cluster_FibeRio_Schema_Result_Chamber {
+	label="FibeRio::Schema::Result::Chamber";
+	"FibeRio::Schema::Result::Chamber::BEGIN@3";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@72";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::BEGIN@6";
+"base::import" -> "Class::C3::Componentised::BEGIN@51";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Helpers::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeSolution::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@1407";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::Auto::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@11";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::MeltPump::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@30";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeMeltZone::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeFan::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::sql_name_sep";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeSubstrate::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasOne::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::CascadeActions::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::InflateColumn::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@11";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@9";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasOne::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@9";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::CascadeActions::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::Fan::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::table";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::datetime_parser_type";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@14";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::Chamber::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@12";
+"Class::C3::Componentised::_load_components" -> "DBIx::Class::Componentised::inject_base";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::MeltZone::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::InflateColumn::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@6";
+"base::import" -> "Class::C3::Componentised::BEGIN@198";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@14";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@5";
+"base::import" -> "Class::C3::Componentised::BEGIN@40";
+"base::import" -> "Class::C3::Componentised::CORE:qr";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BEGIN@6";
+"DBIx::Class::Componentised::inject_base" -> "Class::C3::Componentised::inject_base";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::Auto::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@5";
+"DBIx::Class::Storage::DBI::_determine_driver" -> "Class::C3::Componentised::load_optional_class";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::Spin::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "Sub::Name::subname";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::BEGIN@8";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@9";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@226";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@17";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BelongsTo::belongs_to";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@13";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::sql_quote_char";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@4";
+"Class::C3::Componentised::load_components" -> "Class::C3::Componentised::_load_components";
+"Class::C3::Componentised::load_own_components" -> "Class::C3::Componentised::_load_components";
+"base::import" -> "Class::C3::Componentised::BEGIN@48";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeMeltTemp::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "Class::Accessor::Grouped::mk_group_accessors";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BelongsTo::BEGIN@9";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@3";
+"base::import" -> "Class::C3::Componentised::BEGIN@133";
+"DBIx::Class::Relationship::BelongsTo::belongs_to" -> "Class::C3::Componentised::ensure_class_loaded";
+"DBIx::Class::Relationship::HasMany::has_many" -> "Class::C3::Componentised::ensure_class_loaded";
+"DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:829]" -> "Class::C3::Componentised::ensure_class_loaded";
+"Class::C3::Componentised::load_optional_class" -> "Class::C3::Componentised::ensure_class_loaded";
+"DBIx::Class::ResultSourceProxy::Table::table" -> "Class::C3::Componentised::ensure_class_loaded";
+"DBIx::Class::ResultSet::result_class" -> "Class::C3::Componentised::ensure_class_loaded";
+"Class::C3::Componentised::_load_components" -> "Class::C3::Componentised::ensure_class_loaded";
+"DBIx::Class::AccessorGroup::get_component_class" -> "Class::C3::Componentised::ensure_class_loaded";
+"DBIx::Class::Schema::load_namespaces" -> "Class::C3::Componentised::ensure_class_loaded";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasOne::BEGIN@8";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::Recipe::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@73";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::FanGroup::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::InflateColumn::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::set_primary_key";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@12";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"base::import" -> "Class::C3::Componentised::BEGIN@50";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@116";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::sql_maker_class";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasOne::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@31";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@3";
+"Class::C3::Componentised::load_components" -> "Class::C3::Componentised::CORE:match";
+"Class::C3::Componentised::load_own_components" -> "Class::C3::Componentised::CORE:match";
+"base::import" -> "Class::C3::Componentised::CORE:match";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@110";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::BEGIN@3";
+"base::import" -> "Class::C3::Componentised::BEGIN@41";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@8";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::BEGIN@9";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@11";
+"Class::C3::Componentised::ensure_class_loaded" -> "UNIVERSAL::can";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::cursor_class";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BelongsTo::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@26";
+"Class::C3::Componentised::BEGIN@133" -> "strict::unimport";
+"Class::C3::Componentised::BEGIN@198" -> "strict::unimport";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@9";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@256";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@15";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@8";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Helpers::BEGIN@7";
+"Class::C3::Componentised::inject_base" -> "UNIVERSAL::isa";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::Substrate::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeFanGroup::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@9";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@8";
+"Class::C3::Componentised::inject_base" -> "mro::set_mro";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@225";
+"Class::C3::Componentised::BEGIN@41" -> "warnings::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::CascadeActions::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@16";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "Class::C3::Componentised::load_own_components";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::has_many";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@2";
+"Class::C3::Componentised::BEGIN@48" -> "MRO::Compat::BEGIN@39";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::sql_limit_dialect";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@16";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::mk_classdata";
+"Class::C3::Componentised::load_components" -> "DBIx::Class::component_base_class";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::MeltTemp::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::Auto::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::PK::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BelongsTo::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@13";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeMeltPump::BEGIN@3";
+"Class::C3::Componentised::_load_components" -> "MRO::Compat::__ANON__[MRO/Compat.pm:41]";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ManyToMany::BEGIN@7";
+"Class::C3::Componentised::inject_base" -> "mro::get_linear_isa";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::SQLMaker::SQLite::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@8";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@11";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@6";
+"Class::C3::Componentised::inject_base" -> "Class::C3::Componentised::__ANON__[Class/C3/Componentised.pm:199]";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::add_columns";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::_use_join_optimizer";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::BEGIN@10";
+"DBIx::Class::ResultSourceProxy::Table::BEGIN@8" -> "Class::C3::Componentised::load_components";
+"Class::C3::Componentised::ensure_class_loaded" -> "Class::C3::Componentised::load_components";
+"base::import" -> "Class::C3::Componentised::load_components";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Helpers::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::BelongsTo::BEGIN@8";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasOne::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::Solution::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@25";
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeSpin::BEGIN@3";
+"Class::C3::Componentised::inject_base" -> "List::Util::first";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::Table::BEGIN@4";
+"Class::C3::Componentised::BEGIN@40" -> "strict::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::BEGIN@109";
+}

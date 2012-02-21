@@ -1,0 +1,196 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_FibeRio_Schema_Result_Substrate {
+	label="FibeRio::Schema::Result::Substrate";
+	"FibeRio::Schema::Result::Substrate::result_source_instance";
+}
+subgraph cluster_DBIx_Class_Relationship_Accessor {
+	label="DBIx::Class::Relationship::Accessor";
+	"DBIx::Class::Relationship::Accessor::register_relationship";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeSpin {
+	label="FibeRio::Schema::Result::RecipeSpin";
+	"FibeRio::Schema::Result::RecipeSpin::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeSolution {
+	label="FibeRio::Schema::Result::RecipeSolution";
+	"FibeRio::Schema::Result::RecipeSolution::result_source_instance";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeSubstrate {
+	label="FibeRio::Schema::Result::RecipeSubstrate";
+	"FibeRio::Schema::Result::RecipeSubstrate::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltZone {
+	label="FibeRio::Schema::Result::MeltZone";
+	"FibeRio::Schema::Result::MeltZone::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeMeltTemp {
+	label="FibeRio::Schema::Result::RecipeMeltTemp";
+	"FibeRio::Schema::Result::RecipeMeltTemp::result_source_instance";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::BEGIN@84";
+	"DBIx::Class::ResultSourceProxy::CORE:subst";
+	"DBIx::Class::ResultSourceProxy::BEGIN@10";
+	"DBIx::Class::ResultSourceProxy::BEGIN@4";
+	"DBIx::Class::ResultSourceProxy::add_relationship";
+	"DBIx::Class::ResultSourceProxy::BEGIN@8";
+	"DBIx::Class::ResultSourceProxy::BEGIN@9";
+	"DBIx::Class::ResultSourceProxy::BEGIN@5";
+	"DBIx::Class::ResultSourceProxy::add_columns";
+	"DBIx::Class::ResultSourceProxy::BEGIN@7";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltTemp {
+	label="FibeRio::Schema::Result::MeltTemp";
+	"FibeRio::Schema::Result::MeltTemp::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_FanGroup {
+	label="FibeRio::Schema::Result::FanGroup";
+	"FibeRio::Schema::Result::FanGroup::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeMeltPump {
+	label="FibeRio::Schema::Result::RecipeMeltPump";
+	"FibeRio::Schema::Result::RecipeMeltPump::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_Solution {
+	label="FibeRio::Schema::Result::Solution";
+	"FibeRio::Schema::Result::Solution::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltPump {
+	label="FibeRio::Schema::Result::MeltPump";
+	"FibeRio::Schema::Result::MeltPump::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_Spin {
+	label="FibeRio::Schema::Result::Spin";
+	"FibeRio::Schema::Result::Spin::result_source_instance";
+}
+subgraph cluster_DBIx_Class_Relationship_BelongsTo {
+	label="DBIx::Class::Relationship::BelongsTo";
+	"DBIx::Class::Relationship::BelongsTo::belongs_to";
+}
+subgraph cluster_FibeRio_Schema_Result_Fan {
+	label="FibeRio::Schema::Result::Fan";
+	"FibeRio::Schema::Result::Fan::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_Recipe {
+	label="FibeRio::Schema::Result::Recipe";
+	"FibeRio::Schema::Result::Recipe::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeFan {
+	label="FibeRio::Schema::Result::RecipeFan";
+	"FibeRio::Schema::Result::RecipeFan::result_source_instance";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::add_columns";
+	"DBIx::Class::ResultSource::column_info";
+	"DBIx::Class::ResultSource::relationship_info";
+	"DBIx::Class::ResultSource::add_relationship";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeFanGroup {
+	label="FibeRio::Schema::Result::RecipeFanGroup";
+	"FibeRio::Schema::Result::RecipeFanGroup::result_source_instance";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeMeltZone {
+	label="FibeRio::Schema::Result::RecipeMeltZone";
+	"FibeRio::Schema::Result::RecipeMeltZone::result_source_instance";
+}
+subgraph cluster_DBIx_Class_Relationship_HasMany {
+	label="DBIx::Class::Relationship::HasMany";
+	"DBIx::Class::Relationship::HasMany::has_many";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+subgraph cluster_DBIx_Class_Row {
+	label="DBIx::Class::Row";
+	"DBIx::Class::Row::register_column";
+}
+subgraph cluster_FibeRio_Schema_Result_Chamber {
+	label="FibeRio::Schema::Result::Chamber";
+	"FibeRio::Schema::Result::Chamber::result_source_instance";
+}
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeMeltPump::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeMeltPump::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::Recipe::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::Recipe::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeSubstrate::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeSubstrate::result_source_instance";
+"DBIx::Class::ResultSourceProxy::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::ResultSourceProxy::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeSpin::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeSpin::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "DBIx::Class::ResultSource::add_relationship";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::MeltPump::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::MeltPump::result_source_instance";
+"DBIx::Class::Relationship::BelongsTo::belongs_to" -> "DBIx::Class::ResultSourceProxy::add_relationship";
+"DBIx::Class::Relationship::HasMany::has_many" -> "DBIx::Class::ResultSourceProxy::add_relationship";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@5";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@84";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::ResultSourceProxy::CORE:subst";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::ResultSource::add_columns";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::Solution::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::Solution::result_source_instance";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@8";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "DBIx::Class::ResultSource::relationship_info";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::Substrate::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::Substrate::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::Chamber::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::Chamber::result_source_instance";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@9";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::Spin::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::Spin::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::Row::register_column";
+"DBIx::Class::ResultSourceProxy::BEGIN@84" -> "strict::unimport";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::MeltZone::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::MeltZone::result_source_instance";
+"DBIx::Class::ResultSourceProxy::BEGIN@7" -> "base::import";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeFanGroup::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeFanGroup::result_source_instance";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@10";
+"DBIx::Class::ResultSourceProxy::BEGIN@5" -> "warnings::import";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::ResultSource::column_info";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::MeltTemp::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::MeltTemp::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeMeltZone::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeMeltZone::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeMeltTemp::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeMeltTemp::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::FanGroup::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::FanGroup::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeSolution::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeSolution::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::Fan::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::Fan::result_source_instance";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSourceProxy::add_columns";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@7";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "DBIx::Class::Relationship::Accessor::register_relationship";
+"base::import" -> "DBIx::Class::ResultSourceProxy::BEGIN@4";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "FibeRio::Schema::Result::RecipeFan::result_source_instance";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "FibeRio::Schema::Result::RecipeFan::result_source_instance";
+"DBIx::Class::ResultSourceProxy::BEGIN@10" -> "namespace::clean::import";
+"DBIx::Class::ResultSourceProxy::BEGIN@4" -> "strict::import";
+}

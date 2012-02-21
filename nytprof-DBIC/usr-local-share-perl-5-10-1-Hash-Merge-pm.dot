@@ -1,0 +1,56 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::_merge_attr";
+	"DBIx::Class::ResultSet::__ANON__[DBIx/Class/ResultSet.pm:3506]";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Hash_Merge {
+	label="Hash::Merge";
+	"Hash::Merge::BEGIN@5";
+	"Hash::Merge::_get_obj";
+	"Hash::Merge::BEGIN@8";
+	"Hash::Merge::merge";
+	"Hash::Merge::BEGIN@3";
+	"Hash::Merge::specify_behavior";
+	"Hash::Merge::BEGIN@4";
+	"Hash::Merge::BEGIN@7";
+	"Hash::Merge::new";
+}
+"Hash::Merge::specify_behavior" -> "Hash::Merge::_get_obj";
+"Hash::Merge::merge" -> "Hash::Merge::_get_obj";
+"Hash::Merge::BEGIN@5" -> "Exporter::import";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::BEGIN@7";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::new";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::BEGIN@3";
+"Hash::Merge::merge" -> "DBIx::Class::ResultSet::__ANON__[DBIx/Class/ResultSet.pm:3506]";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::BEGIN@5";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::specify_behavior";
+"Hash::Merge::BEGIN@7" -> "base::import";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::BEGIN@4";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::BEGIN@8";
+"Hash::Merge::BEGIN@4" -> "warnings::import";
+"Hash::Merge::BEGIN@8" -> "vars::import";
+"DBIx::Class::ResultSet::_merge_attr" -> "Hash::Merge::merge";
+"Hash::Merge::BEGIN@3" -> "strict::import";
+}

@@ -1,0 +1,215 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_ResultSourceProxy_Table {
+	label="DBIx::Class::ResultSourceProxy::Table";
+	"DBIx::Class::ResultSourceProxy::Table::table";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_Carp {
+	label="DBIx::Class::Carp";
+	"DBIx::Class::Carp::import";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::new";
+	"DBIx::Class::ResultSet::cursor";
+	"DBIx::Class::ResultSet::_resolved_attrs";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::_pri_cols";
+	"DBIx::Class::ResultSourceProxy::relationship_info";
+	"DBIx::Class::ResultSourceProxy::columns";
+	"DBIx::Class::ResultSourceProxy::has_column";
+	"DBIx::Class::ResultSourceProxy::add_columns";
+	"DBIx::Class::ResultSourceProxy::add_relationship";
+	"DBIx::Class::ResultSourceProxy::set_primary_key";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_DBIx_Class_ResultSource_Table {
+	label="DBIx::Class::ResultSource::Table";
+	"DBIx::Class::ResultSource::Table::_relationships";
+	"DBIx::Class::ResultSource::Table::column_info_from_storage";
+	"DBIx::Class::ResultSource::Table::_unique_constraints";
+	"DBIx::Class::ResultSource::Table::_primaries";
+	"DBIx::Class::ResultSource::Table::_columns";
+	"DBIx::Class::ResultSource::Table::_ordered_columns";
+}
+subgraph cluster_Class_Accessor_Grouped {
+	label="Class::Accessor::Grouped";
+	"Class::Accessor::Grouped::mk_group_accessors";
+}
+subgraph cluster_Try_Tiny {
+	label="Try::Tiny";
+	"Try::Tiny::try";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::clone";
+	"DBIx::Class::Schema::default_resultset_attributes";
+	"DBIx::Class::Schema::_register_source";
+	"DBIx::Class::Schema::resultset";
+	"DBIx::Class::Schema::storage";
+}
+subgraph cluster_main {
+	label="main";
+	"main::NULL";
+	"main::RUNTIME";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::_relationships";
+	"DBIx::Class::ResultSource::CORE:match";
+	"DBIx::Class::ResultSource::BEGIN@16";
+	"DBIx::Class::ResultSource::BEGIN@3";
+	"DBIx::Class::ResultSource::BEGIN@4";
+	"DBIx::Class::ResultSource::new";
+	"DBIx::Class::ResultSource::BEGIN@6";
+	"DBIx::Class::ResultSource::unique_constraints";
+	"DBIx::Class::ResultSource::column_info_from_storage";
+	"DBIx::Class::ResultSource::add_columns";
+	"DBIx::Class::ResultSource::_ordered_columns";
+	"DBIx::Class::ResultSource::_primaries";
+	"DBIx::Class::ResultSource::resultset_class";
+	"DBIx::Class::ResultSource::__ANON__[DBIx/Class/ResultSource.pm:1038]";
+	"DBIx::Class::ResultSource::primary_columns";
+	"DBIx::Class::ResultSource::storage";
+	"DBIx::Class::ResultSource::BEGIN@13";
+	"DBIx::Class::ResultSource::BEGIN@10";
+	"DBIx::Class::ResultSource::has_column";
+	"DBIx::Class::ResultSource::_columns";
+	"DBIx::Class::ResultSource::columns";
+	"DBIx::Class::ResultSource::BEGIN@7";
+	"DBIx::Class::ResultSource::set_primary_key";
+	"DBIx::Class::ResultSource::BEGIN@11";
+	"DBIx::Class::ResultSource::CORE:subst";
+	"DBIx::Class::ResultSource::END";
+	"DBIx::Class::ResultSource::BEGIN@9";
+	"DBIx::Class::ResultSource::schema";
+	"DBIx::Class::ResultSource::add_unique_constraint";
+	"DBIx::Class::ResultSource::resultset";
+	"DBIx::Class::ResultSource::DESTROY";
+	"DBIx::Class::ResultSource::BEGIN@14";
+	"DBIx::Class::ResultSource::add_relationship";
+	"DBIx::Class::ResultSource::relationship_info";
+	"DBIx::Class::ResultSource::column_info";
+	"DBIx::Class::ResultSource::_unique_constraints";
+	"DBIx::Class::ResultSource::_pri_cols";
+	"DBIx::Class::ResultSource::BEGIN@12";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+subgraph cluster_DBIx_Class_ResultSourceHandle {
+	label="DBIx::Class::ResultSourceHandle";
+	"DBIx::Class::ResultSourceHandle::BEGIN@4";
+	"DBIx::Class::ResultSourceHandle::BEGIN@8";
+	"DBIx::Class::ResultSourceHandle::BEGIN@6";
+	"DBIx::Class::ResultSourceHandle::BEGIN@9";
+	"DBIx::Class::ResultSourceHandle::BEGIN@11";
+	"DBIx::Class::ResultSourceHandle::BEGIN@3";
+	"DBIx::Class::ResultSourceHandle::BEGIN@14";
+}
+"DBIx::Class::ResultSource::add_relationship" -> "DBIx::Class::ResultSource::_relationships";
+"DBIx::Class::ResultSource::add_columns" -> "DBIx::Class::ResultSource::Table::_ordered_columns";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@9";
+"DBIx::Class::ResultSource::resultset" -> "Try::Tiny::try";
+"DBIx::Class::Schema::clone" -> "DBIx::Class::ResultSource::new";
+"DBIx::Class::Schema::_register_source" -> "DBIx::Class::ResultSource::new";
+"DBIx::Class::ResultSourceProxy::Table::table" -> "DBIx::Class::ResultSource::new";
+"DBIx::Class::ResultSource::add_columns" -> "DBIx::Class::ResultSource::_ordered_columns";
+"DBIx::Class::ResultSource::BEGIN@13" -> "Exporter::import";
+"DBIx::Class::ResultSource::BEGIN@11" -> "Exporter::import";
+"DBIx::Class::ResultSource::BEGIN@12" -> "Exporter::import";
+"DBIx::Class::ResultSource::add_unique_constraint" -> "DBIx::Class::ResultSource::has_column";
+"DBIx::Class::ResultSourceProxy::has_column" -> "DBIx::Class::ResultSource::has_column";
+"DBIx::Class::ResultSource::set_primary_key" -> "DBIx::Class::ResultSource::has_column";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@7";
+"DBIx::Class::ResultSource::unique_constraints" -> "DBIx::Class::ResultSource::Table::_unique_constraints";
+"DBIx::Class::ResultSource::add_unique_constraint" -> "DBIx::Class::ResultSource::Table::_unique_constraints";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@3";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@14";
+"DBIx::Class::ResultSource::set_primary_key" -> "DBIx::Class::ResultSource::add_unique_constraint";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@14";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "DBIx::Class::ResultSource::add_relationship";
+"DBIx::Class::ResultSource::add_relationship" -> "DBIx::Class::ResultSource::CORE:match";
+"DBIx::Class::ResultSource::column_info" -> "DBIx::Class::ResultSource::column_info_from_storage";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::ResultSource::add_columns";
+"DBIx::Class::ResultSource::set_primary_key" -> "DBIx::Class::ResultSource::_primaries";
+"Try::Tiny::try" -> "DBIx::Class::ResultSource::__ANON__[DBIx/Class/ResultSource.pm:1038]";
+"DBIx::Class::ResultSet::cursor" -> "DBIx::Class::ResultSource::storage";
+"DBIx::Class::ResultSource::column_info" -> "DBIx::Class::ResultSource::Table::column_info_from_storage";
+"DBIx::Class::ResultSource::relationship_info" -> "DBIx::Class::ResultSource::Table::_relationships";
+"DBIx::Class::ResultSource::add_relationship" -> "DBIx::Class::ResultSource::Table::_relationships";
+"DBIx::Class::ResultSourceProxy::columns" -> "DBIx::Class::ResultSource::columns";
+"DBIx::Class::ResultSet::_resolved_attrs" -> "DBIx::Class::ResultSource::columns";
+"DBIx::Class::ResultSource::has_column" -> "DBIx::Class::ResultSource::Table::_columns";
+"DBIx::Class::ResultSource::add_columns" -> "DBIx::Class::ResultSource::Table::_columns";
+"DBIx::Class::ResultSource::column_info" -> "DBIx::Class::ResultSource::Table::_columns";
+"DBIx::Class::ResultSource::BEGIN@7" -> "Class::Accessor::Grouped::mk_group_accessors";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@11";
+"DBIx::Class::Schema::_register_source" -> "DBIx::Class::ResultSource::schema";
+"DBIx::Class::ResultSource::__ANON__[DBIx/Class/ResultSource.pm:1038]" -> "DBIx::Class::ResultSource::schema";
+"DBIx::Class::ResultSource::storage" -> "DBIx::Class::ResultSource::schema";
+"DBIx::Class::ResultSourceProxy::relationship_info" -> "DBIx::Class::ResultSource::relationship_info";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "DBIx::Class::ResultSource::relationship_info";
+"DBIx::Class::ResultSource::BEGIN@10" -> "DBIx::Class::Carp::import";
+"DBIx::Class::ResultSource::unique_constraints" -> "DBIx::Class::ResultSource::_unique_constraints";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@12";
+"DBIx::Class::ResultSource::primary_columns" -> "DBIx::Class::ResultSource::Table::_primaries";
+"DBIx::Class::ResultSource::set_primary_key" -> "DBIx::Class::ResultSource::Table::_primaries";
+"DBIx::Class::ResultSource::BEGIN@7" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"DBIx::Class::ResultSource::resultset" -> "DBIx::Class::ResultSet::new";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@3";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@6";
+"DBIx::Class::ResultSource::_pri_cols" -> "DBIx::Class::ResultSource::primary_columns";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@10";
+"DBIx::Class::ResultSourceProxy::set_primary_key" -> "DBIx::Class::ResultSource::set_primary_key";
+"DBIx::Class::ResultSource::BEGIN@16" -> "base::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@9";
+"DBIx::Class::Schema::resultset" -> "DBIx::Class::ResultSource::resultset";
+"DBIx::Class::Schema::clone" -> "DBIx::Class::ResultSource::DESTROY";
+"main::NULL" -> "DBIx::Class::ResultSource::DESTROY";
+"DBIx::Class::ResultSource::BEGIN@4" -> "warnings::import";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::ResultSource::column_info";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@8";
+"DBIx::Class::ResultSourceProxy::_pri_cols" -> "DBIx::Class::ResultSource::_pri_cols";
+"DBIx::Class::ResultSource::__ANON__[DBIx/Class/ResultSource.pm:1038]" -> "DBIx::Class::Schema::default_resultset_attributes";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@16";
+"DBIx::Class::ResultSource::add_unique_constraint" -> "DBIx::Class::ResultSource::unique_constraints";
+"DBIx::Class::ResultSource::resultset" -> "DBIx::Class::ResultSource::resultset_class";
+"DBIx::Class::ResultSource::storage" -> "DBIx::Class::Schema::storage";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@13";
+"DBIx::Class::ResultSource::add_columns" -> "DBIx::Class::ResultSource::_columns";
+"DBIx::Class::ResultSource::BEGIN@7" -> "DBIx::Class::ResultSourceHandle::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::ResultSource::BEGIN@11";
+"main::RUNTIME" -> "DBIx::Class::ResultSource::END";
+"DBIx::Class::ResultSource::add_columns" -> "DBIx::Class::ResultSource::CORE:subst";
+"DBIx::Class::ResultSource::BEGIN@14" -> "namespace::clean::import";
+"DBIx::Class::ResultSource::BEGIN@3" -> "strict::import";
+}

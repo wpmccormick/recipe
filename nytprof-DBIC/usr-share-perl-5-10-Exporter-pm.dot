@@ -1,0 +1,256 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_ResultSourceProxy_Table {
+	label="DBIx::Class::ResultSourceProxy::Table";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@9";
+}
+subgraph cluster_DBIx_Class_SQLMaker {
+	label="DBIx::Class::SQLMaker";
+	"DBIx::Class::SQLMaker::BEGIN@45";
+}
+subgraph cluster_DBI {
+	label="DBI";
+	"DBI::BEGIN@163";
+}
+subgraph cluster_DBIx_Class_AccessorGroup {
+	label="DBIx::Class::AccessorGroup";
+	"DBIx::Class::AccessorGroup::BEGIN@7";
+}
+subgraph cluster_Sub_Identify {
+	label="Sub::Identify";
+	"Sub::Identify::BEGIN@4";
+}
+subgraph cluster_Tie_Hash {
+	label="Tie::Hash";
+	"Tie::Hash::BEGIN@5";
+}
+subgraph cluster_Data_Compare {
+	label="Data::Compare";
+	"Data::Compare::BEGIN@14";
+	"Data::Compare::BEGIN@24";
+	"Data::Compare::BEGIN@15";
+	"Data::Compare::BEGIN@13";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+}
+subgraph cluster_DBIx_Class_Storage_DBIHacks {
+	label="DBIx::Class::Storage::DBIHacks";
+	"DBIx::Class::Storage::DBIHacks::BEGIN@17";
+	"DBIx::Class::Storage::DBIHacks::BEGIN@18";
+	"DBIx::Class::Storage::DBIHacks::BEGIN@16";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::BEGIN@10";
+	"DBIx::Class::ResultSet::BEGIN@9";
+}
+subgraph cluster_DBIx_Class_Storage {
+	label="DBIx::Class::Storage";
+	"DBIx::Class::Storage::BEGIN@18";
+	"DBIx::Class::Storage::BEGIN@16";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::BEGIN@4";
+	"Exporter::Heavy::BEGIN@186";
+	"Exporter::Heavy::heavy_export_to_level";
+	"Exporter::Heavy::BEGIN@3";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::BEGIN@8";
+	"DBIx::Class::ResultSourceProxy::BEGIN@9";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+	"Exporter::export_to_level";
+	"Exporter::as_heavy";
+	"Exporter::export";
+	"Exporter::CORE:subst";
+	"Exporter::export_ok_tags";
+	"Exporter::CORE:match";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::BEGIN@14";
+}
+subgraph cluster_Sub_Install {
+	label="Sub::Install";
+	"Sub::Install::BEGIN@6";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_SQLite {
+	label="DBIx::Class::Storage::DBI::SQLite";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@10";
+}
+subgraph cluster_SQL_Abstract {
+	label="SQL::Abstract";
+	"SQL::Abstract::BEGIN@8";
+}
+subgraph cluster_Try_Tiny {
+	label="Try::Tiny";
+	"Try::Tiny::BEGIN@46";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::BEGIN@8";
+	"DBIx::Class::Schema::BEGIN@9";
+	"DBIx::Class::Schema::BEGIN@11";
+	"DBIx::Class::Schema::BEGIN@10";
+}
+subgraph cluster_DBIx_Class_Relationship_BelongsTo {
+	label="DBIx::Class::Relationship::BelongsTo";
+	"DBIx::Class::Relationship::BelongsTo::BEGIN@9";
+}
+subgraph cluster_DBIx_Class_Storage_TxnScopeGuard {
+	label="DBIx::Class::Storage::TxnScopeGuard";
+	"DBIx::Class::Storage::TxnScopeGuard::BEGIN@6";
+	"DBIx::Class::Storage::TxnScopeGuard::BEGIN@5";
+}
+subgraph cluster_DBIx_Class_Relationship_HasOne {
+	label="DBIx::Class::Relationship::HasOne";
+	"DBIx::Class::Relationship::HasOne::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::BEGIN@14";
+	"DBIx::Class::Storage::DBI::BEGIN@13";
+	"DBIx::Class::Storage::DBI::BEGIN@12";
+	"DBIx::Class::Storage::DBI::BEGIN@15";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@10";
+	"Package::DeprecationManager::BEGIN@9";
+	"Package::DeprecationManager::BEGIN@11";
+}
+subgraph cluster_Class_XSAccessor_Heavy {
+	label="Class::XSAccessor::Heavy";
+	"Class::XSAccessor::Heavy::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Relationship_ManyToMany {
+	label="DBIx::Class::Relationship::ManyToMany";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@9";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@8";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::BEGIN@11";
+	"DBIx::Class::ResultSource::BEGIN@13";
+	"DBIx::Class::ResultSource::BEGIN@12";
+}
+subgraph cluster_DBIx_Class_Relationship_Base {
+	label="DBIx::Class::Relationship::Base";
+	"DBIx::Class::Relationship::Base::BEGIN@8";
+	"DBIx::Class::Relationship::Base::BEGIN@9";
+}
+subgraph cluster_DBIx_Class_SQLMaker_LimitDialects {
+	label="DBIx::Class::SQLMaker::LimitDialects";
+	"DBIx::Class::SQLMaker::LimitDialects::BEGIN@6";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_Cursor {
+	label="DBIx::Class::Storage::DBI::Cursor";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@8";
+}
+subgraph cluster_Hash_Merge {
+	label="Hash::Merge";
+	"Hash::Merge::BEGIN@5";
+}
+subgraph cluster_Time_HiRes {
+	label="Time::HiRes";
+	"Time::HiRes::import";
+}
+subgraph cluster_Class_XSAccessor {
+	label="Class::XSAccessor";
+	"Class::XSAccessor::BEGIN@5";
+}
+subgraph cluster_DBIx_Class_Relationship_HasMany {
+	label="DBIx::Class::Relationship::HasMany";
+	"DBIx::Class::Relationship::HasMany::BEGIN@6";
+}
+subgraph cluster_DBIx_Class_Row {
+	label="DBIx::Class::Row";
+	"DBIx::Class::Row::BEGIN@9";
+	"DBIx::Class::Row::BEGIN@11";
+	"DBIx::Class::Row::BEGIN@10";
+}
+subgraph cluster_DBIx_Class_ResultSourceHandle {
+	label="DBIx::Class::ResultSourceHandle";
+	"DBIx::Class::ResultSourceHandle::BEGIN@9";
+}
+subgraph cluster_Cwd {
+	label="Cwd";
+	"Cwd::BEGIN@4";
+}
+"Exporter::export_to_level" -> "Exporter::as_heavy";
+"Exporter::export" -> "Exporter::as_heavy";
+"Exporter::export_ok_tags" -> "Exporter::as_heavy";
+"Exporter::import" -> "Exporter::CORE:match";
+"DBIx::Class::Storage::BEGIN@18" -> "Exporter::import";
+"DBIx::Class::ResultSourceHandle::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::Relationship::Base::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::Storage::DBIHacks::BEGIN@18" -> "Exporter::import";
+"DBIx::Class::SQLMaker::BEGIN@45" -> "Exporter::import";
+"DBIx::Class::Schema::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::ResultSet::BEGIN@10" -> "Exporter::import";
+"DBIx::Class::SQLMaker::LimitDialects::BEGIN@6" -> "Exporter::import";
+"DBIx::Class::Storage::DBI::BEGIN@13" -> "Exporter::import";
+"Data::Compare::BEGIN@24" -> "Exporter::import";
+"DBIx::Class::ResultSet::BEGIN@9" -> "Exporter::import";
+"Package::DeprecationManager::BEGIN@11" -> "Exporter::import";
+"DBIx::Class::Storage::BEGIN@16" -> "Exporter::import";
+"DBIx::Class::ResultSource::BEGIN@13" -> "Exporter::import";
+"DBIx::Class::ResultSourceProxy::Table::BEGIN@9" -> "Exporter::import";
+"Data::Compare::BEGIN@15" -> "Exporter::import";
+"DBIx::Class::Storage::DBIHacks::BEGIN@16" -> "Exporter::import";
+"DBIx::Class::ResultSourceProxy::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::ResultSourceProxy::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::Schema::BEGIN@9" -> "Exporter::import";
+"Package::DeprecationManager::BEGIN@10" -> "Exporter::import";
+"DBIx::Class::Relationship::ManyToMany::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::Row::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::Relationship::HasOne::BEGIN@7" -> "Exporter::import";
+"DBIx::Class::Storage::TxnScopeGuard::BEGIN@5" -> "Exporter::import";
+"Package::DeprecationManager::BEGIN@9" -> "Exporter::import";
+"Module::Find::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::Schema::BEGIN@11" -> "Exporter::import";
+"DBIx::Class::Row::BEGIN@10" -> "Exporter::import";
+"DBIx::Class::Storage::DBI::BEGIN@15" -> "Exporter::import";
+"Sub::Install::BEGIN@6" -> "Exporter::import";
+"DBIx::Class::Relationship::ManyToMany::BEGIN@8" -> "Exporter::import";
+"Data::Compare::BEGIN@13" -> "Exporter::import";
+"Tie::Hash::BEGIN@5" -> "Exporter::import";
+"DBIx::Class::Relationship::Base::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::Relationship::BelongsTo::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::ResultSource::BEGIN@11" -> "Exporter::import";
+"Cwd::BEGIN@4" -> "Exporter::import";
+"DBIx::Class::Storage::TxnScopeGuard::BEGIN@6" -> "Exporter::import";
+"DBIx::Class::Relationship::HasMany::BEGIN@6" -> "Exporter::import";
+"DBIx::Class::Storage::DBI::BEGIN@14" -> "Exporter::import";
+"DBIx::Class::Storage::DBI::BEGIN@12" -> "Exporter::import";
+"DBIx::Class::Schema::BEGIN@10" -> "Exporter::import";
+"Hash::Merge::BEGIN@5" -> "Exporter::import";
+"DBIx::Class::AccessorGroup::BEGIN@7" -> "Exporter::import";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Exporter::import";
+"Try::Tiny::BEGIN@46" -> "Exporter::import";
+"Class::XSAccessor::Heavy::BEGIN@7" -> "Exporter::import";
+"DBIx::Class::Storage::DBIHacks::BEGIN@17" -> "Exporter::import";
+"Data::Compare::BEGIN@14" -> "Exporter::import";
+"Class::XSAccessor::BEGIN@5" -> "Exporter::import";
+"DBIx::Class::Row::BEGIN@11" -> "Exporter::import";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@10" -> "Exporter::import";
+"SQL::Abstract::BEGIN@8" -> "Exporter::import";
+"DBIx::Class::ResultSource::BEGIN@12" -> "Exporter::import";
+"Sub::Identify::BEGIN@4" -> "Exporter::import";
+"Exporter::import" -> "Exporter::CORE:subst";
+"Exporter::as_heavy" -> "Exporter::CORE:subst";
+"Exporter::as_heavy" -> "Exporter::Heavy::BEGIN@4";
+"DBI::BEGIN@163" -> "Exporter::export_ok_tags";
+"Time::HiRes::import" -> "Exporter::export_to_level";
+"Exporter::Heavy::heavy_export_to_level" -> "Exporter::export";
+"Exporter::as_heavy" -> "Exporter::Heavy::BEGIN@186";
+"Exporter::as_heavy" -> "Exporter::Heavy::BEGIN@3";
+}

@@ -1,0 +1,47 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+}
+subgraph cluster_File_Find {
+	label="File::Find";
+	"File::Find::_find_opt";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Cwd {
+	label="Cwd";
+	"Cwd::BEGIN@42";
+	"Cwd::BEGIN@5";
+	"Cwd::BEGIN@4";
+	"Cwd::CORE:fteexec";
+	"Cwd::getcwd";
+	"Cwd::BEGIN@635";
+	"Cwd::CORE:regcomp";
+	"Cwd::BEGIN@3";
+}
+"Cwd::BEGIN@4" -> "Exporter::import";
+"Module::Find::BEGIN@8" -> "Cwd::BEGIN@5";
+"Module::Find::BEGIN@8" -> "Cwd::BEGIN@3";
+"Module::Find::BEGIN@8" -> "Cwd::CORE:fteexec";
+"Module::Find::BEGIN@8" -> "Cwd::CORE:regcomp";
+"Cwd::BEGIN@635" -> "strict::unimport";
+"Module::Find::BEGIN@8" -> "Cwd::BEGIN@4";
+"Module::Find::BEGIN@8" -> "Cwd::BEGIN@42";
+"Cwd::BEGIN@5" -> "vars::import";
+"File::Find::_find_opt" -> "Cwd::getcwd";
+"Module::Find::BEGIN@8" -> "Cwd::BEGIN@635";
+"Cwd::BEGIN@3" -> "strict::import";
+}

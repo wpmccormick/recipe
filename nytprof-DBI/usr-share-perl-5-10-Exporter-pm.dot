@@ -1,0 +1,49 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBI {
+	label="DBI";
+	"DBI::BEGIN@163";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@17";
+}
+subgraph cluster_Tie_Hash {
+	label="Tie::Hash";
+	"Tie::Hash::BEGIN@5";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::BEGIN@4";
+	"Exporter::Heavy::BEGIN@186";
+	"Exporter::Heavy::heavy_export_to_level";
+	"Exporter::Heavy::BEGIN@3";
+}
+subgraph cluster_Time_HiRes {
+	label="Time::HiRes";
+	"Time::HiRes::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+	"Exporter::export_to_level";
+	"Exporter::as_heavy";
+	"Exporter::CORE:subst";
+	"Exporter::export";
+	"Exporter::export_ok_tags";
+	"Exporter::CORE:match";
+}
+"Exporter::export_to_level" -> "Exporter::as_heavy";
+"Exporter::export" -> "Exporter::as_heavy";
+"Exporter::export_ok_tags" -> "Exporter::as_heavy";
+"Time::HiRes::import" -> "Exporter::export_to_level";
+"Exporter::import" -> "Exporter::CORE:match";
+"Tie::Hash::BEGIN@5" -> "Exporter::import";
+"main::BEGIN@17" -> "Exporter::import";
+"Exporter::Heavy::heavy_export_to_level" -> "Exporter::export";
+"Exporter::as_heavy" -> "Exporter::CORE:subst";
+"Exporter::as_heavy" -> "Exporter::Heavy::BEGIN@4";
+"DBI::BEGIN@163" -> "Exporter::export_ok_tags";
+"Exporter::as_heavy" -> "Exporter::Heavy::BEGIN@186";
+"Exporter::as_heavy" -> "Exporter::Heavy::BEGIN@3";
+}

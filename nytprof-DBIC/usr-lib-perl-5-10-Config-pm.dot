@@ -1,0 +1,61 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Config {
+	label="Config";
+	"Config::BEGIN@35";
+	"Config::CORE:subst";
+	"Config::TIEHASH";
+	"Config::CORE:match";
+	"Config::BEGIN@5";
+	"Config::fetch_string";
+	"Config::AUTOLOAD";
+	"Config::import";
+	"Config::CORE:pack";
+	"Config::launcher";
+	"Config::BEGIN@9";
+	"Config::CORE:substcont";
+	"Config::CORE:unpack";
+	"Config::FETCH";
+}
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::BEGIN@24";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@7";
+	"main::BEGIN@5";
+}
+subgraph cluster_lib {
+	label="lib";
+	"lib::BEGIN@6";
+}
+"Config::AUTOLOAD" -> "Config::CORE:match";
+"Config::AUTOLOAD" -> "Config::CORE:pack";
+"DynaLoader::BEGIN@24" -> "Config::BEGIN@35";
+"Config::AUTOLOAD" -> "Config::CORE:substcont";
+"Config::FETCH" -> "Config::fetch_string";
+"DynaLoader::BEGIN@24" -> "Config::TIEHASH";
+"lib::BEGIN@6" -> "Config::import";
+"DynaLoader::BEGIN@24" -> "Config::import";
+"DynaLoader::BEGIN@24" -> "Config::BEGIN@9";
+"Config::BEGIN@35" -> "strict::unimport";
+"Config::FETCH" -> "Config::AUTOLOAD";
+"Config::FETCH" -> "Config::launcher";
+"Config::AUTOLOAD" -> "Config::CORE:unpack";
+"Config::AUTOLOAD" -> "Config::BEGIN@5";
+"Module::Find::BEGIN@8" -> "Config::FETCH";
+"main::BEGIN@7" -> "Config::FETCH";
+"main::BEGIN@5" -> "Config::FETCH";
+"Config::AUTOLOAD" -> "Config::CORE:subst";
+"Config::BEGIN@9" -> "strict::import";
+}

@@ -1,0 +1,17 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_FibeRio_Schema_Result_MeltZone {
+	label="FibeRio::Schema::Result::MeltZone";
+	"FibeRio::Schema::Result::MeltZone::BEGIN@3";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::MeltZone::BEGIN@3";
+"FibeRio::Schema::Result::MeltZone::BEGIN@3" -> "base::import";
+}

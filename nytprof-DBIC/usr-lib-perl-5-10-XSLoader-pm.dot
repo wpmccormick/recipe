@@ -1,0 +1,47 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Sub_Identify {
+	label="Sub::Identify";
+	"Sub::Identify::BEGIN@6";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+}
+subgraph cluster_Variable_Magic {
+	label="Variable::Magic";
+	"Variable::Magic::BEGIN@203";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_DBIx_Class {
+	label="DBIx::Class";
+	"DBIx::Class::BEGIN@18";
+}
+subgraph cluster_Package_Stash {
+	label="Package::Stash";
+	"Package::Stash::BEGIN@11";
+}
+subgraph cluster_Class_Accessor_Grouped {
+	label="Class::Accessor::Grouped";
+	"Class::Accessor::Grouped::BEGIN@529";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::BEGIN@11";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@11";
+}
+"Module::Find::BEGIN@8" -> "XSLoader::load";
+"Class::Accessor::Grouped::BEGIN@529" -> "XSLoader::load";
+"Package::DeprecationManager::BEGIN@11" -> "XSLoader::load";
+"DBIx::Class::Schema::BEGIN@11" -> "XSLoader::load";
+"Variable::Magic::BEGIN@203" -> "XSLoader::load";
+"Package::Stash::BEGIN@11" -> "XSLoader::load";
+"DBIx::Class::BEGIN@18" -> "XSLoader::load";
+"Sub::Identify::BEGIN@6" -> "XSLoader::load";
+}

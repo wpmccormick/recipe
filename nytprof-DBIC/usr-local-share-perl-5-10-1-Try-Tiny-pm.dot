@@ -1,0 +1,98 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Try_Tiny_ScopeGuard {
+	label="Try::Tiny::ScopeGuard";
+	"Try::Tiny::ScopeGuard::DESTROY";
+	"Try::Tiny::ScopeGuard::_new";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Try_Tiny {
+	label="Try::Tiny";
+	"Try::Tiny::finally";
+	"Try::Tiny::BEGIN@6";
+	"Try::Tiny::catch";
+	"Try::Tiny::BEGIN@8";
+	"Try::Tiny::BEGIN@3";
+	"Try::Tiny::try";
+	"Try::Tiny::BEGIN@46";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::BEGIN@8";
+	"DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:204]";
+	"DBIx::Class::Schema::_ns_get_rsrc_instance";
+	"DBIx::Class::Schema::_register_source";
+	"DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:1378]";
+	"DBIx::Class::Schema::connection";
+	"DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:829]";
+}
+subgraph cluster_DBIx_Class_Relationship_BelongsTo {
+	label="DBIx::Class::Relationship::BelongsTo";
+	"DBIx::Class::Relationship::BelongsTo::belongs_to";
+	"DBIx::Class::Relationship::BelongsTo::__ANON__[DBIx/Class/Relationship/BelongsTo.pm:29]";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]";
+	"DBIx::Class::Storage::DBI::_connect";
+	"DBIx::Class::Storage::DBI::dbh_do";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:790]";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1306]";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::resultset";
+	"DBIx::Class::ResultSource::__ANON__[DBIx/Class/ResultSource.pm:1038]";
+}
+subgraph cluster_DBIx_Class_Relationship_HasMany {
+	label="DBIx::Class::Relationship::HasMany";
+	"DBIx::Class::Relationship::HasMany::has_many";
+	"DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:44]";
+	"DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:19]";
+}
+"DBIx::Class::Relationship::BelongsTo::belongs_to" -> "Try::Tiny::try";
+"DBIx::Class::ResultSource::resultset" -> "Try::Tiny::try";
+"DBIx::Class::Relationship::HasMany::has_many" -> "Try::Tiny::try";
+"DBIx::Class::Storage::DBI::dbh_do" -> "Try::Tiny::try";
+"DBIx::Class::Schema::_register_source" -> "Try::Tiny::try";
+"DBIx::Class::Schema::_ns_get_rsrc_instance" -> "Try::Tiny::try";
+"DBIx::Class::Storage::DBI::_connect" -> "Try::Tiny::try";
+"DBIx::Class::Schema::connection" -> "Try::Tiny::try";
+"Try::Tiny::BEGIN@46" -> "Exporter::import";
+"Try::Tiny::ScopeGuard::DESTROY" -> "DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1306]";
+"Try::Tiny::try" -> "DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:19]";
+"Try::Tiny::try" -> "DBIx::Class::Relationship::BelongsTo::__ANON__[DBIx/Class/Relationship/BelongsTo.pm:29]";
+"Try::Tiny::try" -> "DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:44]";
+"Try::Tiny::try" -> "DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:1378]";
+"Try::Tiny::try" -> "Try::Tiny::ScopeGuard::_new";
+"DBIx::Class::Schema::BEGIN@8" -> "Try::Tiny::BEGIN@3";
+"Try::Tiny::try" -> "DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:790]";
+"Try::Tiny::try" -> "DBIx::Class::ResultSource::__ANON__[DBIx/Class/ResultSource.pm:1038]";
+"Try::Tiny::try" -> "DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:829]";
+"DBIx::Class::Storage::DBI::_connect" -> "Try::Tiny::finally";
+"DBIx::Class::Relationship::BelongsTo::belongs_to" -> "Try::Tiny::catch";
+"DBIx::Class::Schema::_ns_get_rsrc_instance" -> "Try::Tiny::catch";
+"DBIx::Class::Relationship::HasMany::has_many" -> "Try::Tiny::catch";
+"DBIx::Class::Storage::DBI::_connect" -> "Try::Tiny::catch";
+"DBIx::Class::Storage::DBI::dbh_do" -> "Try::Tiny::catch";
+"DBIx::Class::Schema::connection" -> "Try::Tiny::catch";
+"DBIx::Class::Schema::BEGIN@8" -> "Try::Tiny::BEGIN@6";
+"Try::Tiny::try" -> "Try::Tiny::ScopeGuard::DESTROY";
+"Try::Tiny::try" -> "DBIx::Class::Schema::__ANON__[DBIx/Class/Schema.pm:204]";
+"Try::Tiny::BEGIN@6" -> "vars::import";
+"Try::Tiny::try" -> "DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]";
+"DBIx::Class::Schema::BEGIN@8" -> "Try::Tiny::BEGIN@8";
+"DBIx::Class::Schema::BEGIN@8" -> "Try::Tiny::BEGIN@46";
+"Try::Tiny::BEGIN@3" -> "strict::import";
+}

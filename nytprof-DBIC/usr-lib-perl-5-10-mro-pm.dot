@@ -1,0 +1,115 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_SQLMaker {
+	label="DBIx::Class::SQLMaker";
+	"DBIx::Class::SQLMaker::select";
+	"DBIx::Class::SQLMaker::_quote";
+	"DBIx::Class::SQLMaker::new";
+	"DBIx::Class::SQLMaker::BEGIN@43";
+}
+subgraph cluster_DBIx_Class_Relationship_Accessor {
+	label="DBIx::Class::Relationship::Accessor";
+	"DBIx::Class::Relationship::Accessor::register_relationship";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_Storage_DBIHacks {
+	label="DBIx::Class::Storage::DBIHacks";
+	"DBIx::Class::Storage::DBIHacks::BEGIN@14";
+}
+subgraph cluster_DBIx_Class_Storage {
+	label="DBIx::Class::Storage";
+	"DBIx::Class::Storage::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Componentised {
+	label="DBIx::Class::Componentised";
+	"DBIx::Class::Componentised::inject_base";
+	"DBIx::Class::Componentised::BEGIN@8";
+}
+subgraph cluster_DBIx_Class {
+	label="DBIx::Class";
+	"DBIx::Class::BEGIN@66";
+	"DBIx::Class::BEGIN@18";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::inject_base";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::_nextcan";
+	"mro::import";
+	"mro::BEGIN@10";
+	"mro::get_linear_isa";
+	"mro::method_changed_in";
+	"mro::BEGIN@11";
+	"mro::get_pkg_gen";
+	"mro::set_mro";
+}
+subgraph cluster_next {
+	label="next";
+	"next::method";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_SQLite {
+	label="DBIx::Class::Storage::DBI::SQLite";
+	"DBIx::Class::Storage::DBI::SQLite::_dbi_attrs_for_bind";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Relationship_ProxyMethods {
+	label="DBIx::Class::Relationship::ProxyMethods";
+	"DBIx::Class::Relationship::ProxyMethods::register_relationship";
+}
+subgraph cluster_Class_Accessor_Grouped {
+	label="Class::Accessor::Grouped";
+	"Class::Accessor::Grouped::get_super_paths";
+	"Class::Accessor::Grouped::get_inherited";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::CORE:sort";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::new";
+	"DBIx::Class::Storage::DBI::_determine_driver";
+	"DBIx::Class::Storage::DBI::BEGIN@8";
+}
+"next::method" -> "mro::_nextcan";
+"constant::import" -> "mro::method_changed_in";
+"DBIx::Class::BEGIN@18" -> "mro::BEGIN@10";
+"DBIx::Class::BEGIN@18" -> "mro::BEGIN@11";
+"Class::C3::Componentised::inject_base" -> "mro::set_mro";
+"DBIx::Class::Storage::DBI::_determine_driver" -> "mro::set_mro";
+"mro::import" -> "mro::set_mro";
+"mro::BEGIN@11" -> "warnings::import";
+"DBIx::Class::Storage::BEGIN@7" -> "mro::import";
+"DBIx::Class::BEGIN@66" -> "mro::import";
+"DBIx::Class::Storage::DBIHacks::BEGIN@14" -> "mro::import";
+"DBIx::Class::Componentised::BEGIN@8" -> "mro::import";
+"DBIx::Class::SQLMaker::BEGIN@43" -> "mro::import";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@7" -> "mro::import";
+"DBIx::Class::Storage::DBI::BEGIN@8" -> "mro::import";
+"DBIx::Class::SQLMaker::select" -> "next::method";
+"DBIx::Class::Storage::DBI::new" -> "next::method";
+"DBIx::Class::Componentised::inject_base" -> "next::method";
+"DBIx::Class::Relationship::Accessor::register_relationship" -> "next::method";
+"DBIx::Class::SQLMaker::_quote" -> "next::method";
+"DBIx::Class::SQLMaker::new" -> "next::method";
+"DBIx::Class::Storage::DBI::SQLite::_dbi_attrs_for_bind" -> "next::method";
+"DBIx::Class::Relationship::ProxyMethods::register_relationship" -> "next::method";
+"Class::C3::Componentised::inject_base" -> "mro::get_linear_isa";
+"Class::Accessor::Grouped::get_super_paths" -> "mro::get_linear_isa";
+"DBIx::Class::Schema::CORE:sort" -> "mro::get_linear_isa";
+"Class::Accessor::Grouped::get_inherited" -> "mro::get_pkg_gen";
+"mro::BEGIN@10" -> "strict::import";
+}

@@ -1,0 +1,66 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+	"Module::Find::_wanted";
+	"Module::Find::BEGIN@7";
+	"Module::Find::_find";
+}
+subgraph cluster_File_Spec_Unix {
+	label="File::Spec::Unix";
+	"File::Spec::Unix::curdir";
+	"File::Spec::Unix::rel2abs";
+	"File::Spec::Unix::rootdir";
+	"File::Spec::Unix::canonpath";
+	"File::Spec::Unix::BEGIN@65";
+	"File::Spec::Unix::CORE:match";
+	"File::Spec::Unix::_same";
+	"File::Spec::Unix::catpath";
+	"File::Spec::Unix::updir";
+	"File::Spec::Unix::abs2rel";
+	"File::Spec::Unix::file_name_is_absolute";
+	"File::Spec::Unix::splitpath";
+	"File::Spec::Unix::splitdir";
+	"File::Spec::Unix::BEGIN@4";
+	"File::Spec::Unix::BEGIN@3";
+	"File::Spec::Unix::CORE:subst";
+	"File::Spec::Unix::catdir";
+}
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::updir";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::splitpath";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::canonpath";
+"File::Spec::Unix::rel2abs" -> "File::Spec::Unix::canonpath";
+"File::Spec::Unix::catdir" -> "File::Spec::Unix::canonpath";
+"Module::Find::BEGIN@7" -> "File::Spec::Unix::BEGIN@3";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::splitdir";
+"Module::Find::_wanted" -> "File::Spec::Unix::splitdir";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::rootdir";
+"File::Spec::Unix::file_name_is_absolute" -> "File::Spec::Unix::CORE:match";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::rel2abs";
+"File::Spec::Unix::BEGIN@65" -> "strict::unimport";
+"Module::Find::_wanted" -> "File::Spec::Unix::abs2rel";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::_same";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::curdir";
+"Module::Find::BEGIN@8" -> "File::Spec::Unix::curdir";
+"Module::Find::_wanted" -> "File::Spec::Unix::curdir";
+"File::Spec::Unix::BEGIN@4" -> "vars::import";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::catpath";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::file_name_is_absolute";
+"File::Spec::Unix::rel2abs" -> "File::Spec::Unix::file_name_is_absolute";
+"File::Spec::Unix::abs2rel" -> "File::Spec::Unix::catdir";
+"Module::Find::_find" -> "File::Spec::Unix::catdir";
+"Module::Find::BEGIN@7" -> "File::Spec::Unix::BEGIN@65";
+"Module::Find::BEGIN@7" -> "File::Spec::Unix::BEGIN@4";
+"File::Spec::Unix::BEGIN@3" -> "strict::import";
+"File::Spec::Unix::canonpath" -> "File::Spec::Unix::CORE:subst";
+}

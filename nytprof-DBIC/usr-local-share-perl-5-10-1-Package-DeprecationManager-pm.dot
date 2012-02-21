@@ -1,0 +1,133 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_List_MoreUtils {
+	label="List::MoreUtils";
+	"List::MoreUtils::BEGIN@4";
+	"List::MoreUtils::BEGIN@3";
+	"List::MoreUtils::BEGIN@6";
+	"List::MoreUtils::BEGIN@8";
+	"List::MoreUtils::BEGIN@5";
+	"List::MoreUtils::BEGIN@9";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_Params_Util {
+	label="Params::Util";
+	"Params::Util::_HASH0";
+	"Params::Util::BEGIN@65";
+	"Params::Util::BEGIN@58";
+	"Params::Util::BEGIN@59";
+}
+subgraph cluster_Package_Stash {
+	label="Package::Stash";
+	"Package::Stash::BEGIN@48";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Sub_Install {
+	label="Sub::Install";
+	"Sub::Install::BEGIN@148";
+	"Sub::Install::__ANON__[Sub/Install.pm:284]";
+	"Sub::Install::BEGIN@4";
+	"Sub::Install::BEGIN@3";
+	"Sub::Install::BEGIN@184";
+	"Sub::Install::BEGIN@6";
+	"Sub::Install::BEGIN@287";
+	"Sub::Install::BEGIN@139";
+	"Sub::Install::__ANON__[Sub/Install.pm:132]";
+	"Sub::Install::BEGIN@190";
+	"Sub::Install::BEGIN@7";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@11";
+	"List::Util::BEGIN@12";
+}
+subgraph cluster_overload {
+	label="overload";
+	"overload::BEGIN@139";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::BEGIN@9";
+	"Scalar::Util::BEGIN@10";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@2";
+	"Package::DeprecationManager::_build_warn";
+	"Package::DeprecationManager::import";
+	"Package::DeprecationManager::BEGIN@12";
+	"Package::DeprecationManager::BEGIN@9";
+	"Package::DeprecationManager::BEGIN@11";
+	"Package::DeprecationManager::_build_import";
+	"Package::DeprecationManager::__ANON__[Package/DeprecationManager.pm:61]";
+	"Package::DeprecationManager::BEGIN@6";
+	"Package::DeprecationManager::BEGIN@10";
+	"Package::DeprecationManager::BEGIN@7";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::BEGIN@7";
+}
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@4";
+"Package::DeprecationManager::import" -> "Sub::Install::__ANON__[Sub/Install.pm:132]";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@11";
+"Package::DeprecationManager::BEGIN@11" -> "Exporter::import";
+"Package::DeprecationManager::BEGIN@10" -> "Exporter::import";
+"Package::DeprecationManager::BEGIN@9" -> "Exporter::import";
+"Package::DeprecationManager::BEGIN@11" -> "DynaLoader::bootstrap";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::import";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@9";
+"Package::DeprecationManager::BEGIN@11" -> "Params::Util::BEGIN@59";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@2";
+"Package::DeprecationManager::import" -> "Package::DeprecationManager::_build_warn";
+"Package::DeprecationManager::BEGIN@11" -> "List::Util::BEGIN@11";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@4";
+"namespace::clean::BEGIN@7" -> "Package::DeprecationManager::__ANON__[Package/DeprecationManager.pm:61]";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@190";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@5";
+"Package::DeprecationManager::BEGIN@11" -> "Scalar::Util::BEGIN@9";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@148";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@6";
+"Package::DeprecationManager::BEGIN@11" -> "XSLoader::load";
+"Package::DeprecationManager::BEGIN@11" -> "overload::BEGIN@139";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@8";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@287";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@10";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@7";
+"Package::DeprecationManager::BEGIN@11" -> "List::Util::BEGIN@12";
+"Package::DeprecationManager::BEGIN@11" -> "Params::Util::BEGIN@65";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@3";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@6";
+"Package::DeprecationManager::import" -> "Params::Util::_HASH0";
+"Package::DeprecationManager::BEGIN@11" -> "Scalar::Util::BEGIN@10";
+"Package::DeprecationManager::BEGIN@11" -> "Params::Util::BEGIN@58";
+"Package::DeprecationManager::BEGIN@7" -> "warnings::import";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@7";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@6";
+"Package::Stash::BEGIN@48" -> "Package::DeprecationManager::BEGIN@12";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@184";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::BEGIN@139";
+"Package::DeprecationManager::BEGIN@12" -> "Sub::Install::__ANON__[Sub/Install.pm:284]";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@9";
+"Package::DeprecationManager::import" -> "Package::DeprecationManager::_build_import";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@3";
+"Package::DeprecationManager::BEGIN@6" -> "strict::import";
+}

@@ -1,0 +1,21 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_base {
+	label="base";
+	"base::BEGIN@3";
+	"base::BEGIN@4";
+	"base::import";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@20";
+}
+subgraph cluster_FibeRio_Schema {
+	label="FibeRio::Schema";
+	"FibeRio::Schema::BEGIN@3";
+}
+"main::BEGIN@20" -> "FibeRio::Schema::BEGIN@3";
+"FibeRio::Schema::BEGIN@3" -> "base::BEGIN@3";
+"FibeRio::Schema::BEGIN@3" -> "base::BEGIN@4";
+"FibeRio::Schema::BEGIN@3" -> "base::import";
+}

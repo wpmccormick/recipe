@@ -1,0 +1,31 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_DBIx_Class_InflateColumn {
+	label="DBIx::Class::InflateColumn";
+	"DBIx::Class::InflateColumn::BEGIN@3";
+	"DBIx::Class::InflateColumn::BEGIN@4";
+	"DBIx::Class::InflateColumn::BEGIN@6";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::InflateColumn::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::InflateColumn::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::InflateColumn::BEGIN@6";
+"DBIx::Class::InflateColumn::BEGIN@6" -> "base::import";
+"DBIx::Class::InflateColumn::BEGIN@4" -> "warnings::import";
+"DBIx::Class::InflateColumn::BEGIN@3" -> "strict::import";
+}

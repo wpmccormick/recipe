@@ -1,0 +1,37 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_Exception {
+	label="DBIx::Class::Exception";
+	"DBIx::Class::Exception::BEGIN@9";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::BEGIN@25";
+}
+subgraph cluster_overload {
+	label="overload";
+	"overload::OVERLOAD";
+	"overload::import";
+	"overload::BEGIN@139";
+	"overload::CORE:match";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@11";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_DBIx_Class_ResultSourceHandle {
+	label="DBIx::Class::ResultSourceHandle";
+	"DBIx::Class::ResultSourceHandle::BEGIN@14";
+}
+"Package::DeprecationManager::BEGIN@11" -> "overload::BEGIN@139";
+"overload::BEGIN@139" -> "warnings::register::import";
+"overload::import" -> "overload::OVERLOAD";
+"DBIx::Class::ResultSet::BEGIN@25" -> "overload::import";
+"DBIx::Class::Exception::BEGIN@9" -> "overload::import";
+"DBIx::Class::ResultSourceHandle::BEGIN@14" -> "overload::import";
+"overload::OVERLOAD" -> "overload::CORE:match";
+}

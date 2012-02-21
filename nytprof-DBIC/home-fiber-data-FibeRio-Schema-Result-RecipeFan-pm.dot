@@ -1,0 +1,17 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_FibeRio_Schema_Result_RecipeFan {
+	label="FibeRio::Schema::Result::RecipeFan";
+	"FibeRio::Schema::Result::RecipeFan::BEGIN@3";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "FibeRio::Schema::Result::RecipeFan::BEGIN@3";
+"FibeRio::Schema::Result::RecipeFan::BEGIN@3" -> "base::import";
+}

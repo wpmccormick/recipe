@@ -1,0 +1,124 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Sub_Exporter {
+	label="Sub::Exporter";
+	"Sub::Exporter::BEGIN@7";
+	"Sub::Exporter::BEGIN@8";
+	"Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+	"Sub::Exporter::BEGIN@6";
+	"Sub::Exporter::BEGIN@636";
+	"Sub::Exporter::setup_exporter";
+	"Sub::Exporter::BEGIN@9";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Variable_Magic {
+	label="Variable::Magic";
+	"Variable::Magic::BEGIN@19";
+	"Variable::Magic::BEGIN@5";
+	"Variable::Magic::BEGIN@605";
+	"Variable::Magic::BEGIN@203";
+	"Variable::Magic::BEGIN@3";
+	"Variable::Magic::cast";
+	"Variable::Magic::getdata";
+	"Variable::Magic::BEGIN@6";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::BEGIN@8";
+}
+subgraph cluster_DBIx_Class_Storage {
+	label="DBIx::Class::Storage";
+	"DBIx::Class::Storage::BEGIN@17";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::BEGIN@16";
+	"B::Hooks::EndOfScope::BEGIN@2";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+	"B::Hooks::EndOfScope::BEGIN@1";
+	"B::Hooks::EndOfScope::BEGIN@14";
+	"B::Hooks::EndOfScope::on_scope_end";
+	"B::Hooks::EndOfScope::BEGIN@3";
+	"B::Hooks::EndOfScope::BEGIN@13";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:25]";
+	"B::Hooks::EndOfScope::BEGIN@5";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_DBIx_Class_ResultSource_Table {
+	label="DBIx::Class::ResultSource::Table";
+	"DBIx::Class::ResultSource::Table::BEGIN@6";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::BEGIN@7";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+	"namespace::clean::BEGIN@14";
+	"namespace::clean::BEGIN@1";
+	"namespace::clean::__ANON__[namespace/clean.pm:311]";
+	"namespace::clean::BEGIN@2";
+	"namespace::clean::__ANON__[namespace/clean.pm:338]";
+}
+"namespace::clean::BEGIN@14" -> "namespace::clean::BEGIN@2";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@5";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Exporter::import";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::BEGIN@6";
+"B::Hooks::EndOfScope::BEGIN@16" -> "B::Hooks::EndOfScope::BEGIN@3";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::BEGIN@9";
+"namespace::clean::import" -> "B::Hooks::EndOfScope::on_scope_end";
+"B::Hooks::EndOfScope::BEGIN@16" -> "B::Hooks::EndOfScope::BEGIN@1";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::BEGIN@8";
+"B::Hooks::EndOfScope::on_scope_end" -> "Variable::Magic::getdata";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@3";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::BEGIN@7";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@13";
+"B::Hooks::EndOfScope::on_scope_end" -> "Variable::Magic::cast";
+"DBIx::Class::Storage::BEGIN@17" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"DBIx::Class::ResultSet::BEGIN@8" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"Class::C3::Componentised::ensure_class_loaded" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"DBIx::Class::ResultSource::Table::BEGIN@6" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"DBIx::Class::ResultSource::BEGIN@7" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"base::import" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@6";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::setup_exporter";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@19";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@203";
+"namespace::clean::BEGIN@14" -> "namespace::clean::BEGIN@1";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"namespace::clean::BEGIN@2" -> "warnings::import";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::clean::__ANON__[namespace/clean.pm:338]";
+"Variable::Magic::cast" -> "B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:25]";
+"B::Hooks::EndOfScope::BEGIN@14" -> "Variable::Magic::BEGIN@605";
+"B::Hooks::EndOfScope::BEGIN@16" -> "Sub::Exporter::BEGIN@636";
+"B::Hooks::EndOfScope::BEGIN@16" -> "B::Hooks::EndOfScope::BEGIN@2";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@16";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@5";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@14";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::clean::__ANON__[namespace/clean.pm:311]";
+"B::Hooks::EndOfScope::BEGIN@14" -> "UNIVERSAL::VERSION";
+"namespace::clean::BEGIN@1" -> "strict::import";
+}

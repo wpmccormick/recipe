@@ -1,0 +1,99 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_List_MoreUtils {
+	label="List::MoreUtils";
+	"List::MoreUtils::BEGIN@8";
+}
+subgraph cluster_base {
+	label="base";
+	"base::BEGIN@4";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::BEGIN@3";
+	"vars::BEGIN@8";
+	"vars::import";
+	"vars::CORE:match";
+	"vars::BEGIN@7";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Data_Compare {
+	label="Data::Compare";
+	"Data::Compare::BEGIN@12";
+}
+subgraph cluster_Params_Util {
+	label="Params::Util";
+	"Params::Util::BEGIN@65";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::BEGIN@6";
+}
+subgraph cluster_File_Spec_Unix {
+	label="File::Spec::Unix";
+	"File::Spec::Unix::BEGIN@4";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@12";
+}
+subgraph cluster_Try_Tiny {
+	label="Try::Tiny";
+	"Try::Tiny::BEGIN@6";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::BEGIN@10";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@9";
+	"DBD::SQLite::BEGIN@10";
+	"DBD::SQLite::BEGIN@8";
+}
+subgraph cluster_File_Spec {
+	label="File::Spec";
+	"File::Spec::BEGIN@4";
+}
+subgraph cluster_Hash_Merge {
+	label="Hash::Merge";
+	"Hash::Merge::BEGIN@8";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::BEGIN@6";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_Cwd {
+	label="Cwd";
+	"Cwd::BEGIN@5";
+}
+"base::BEGIN@4" -> "vars::BEGIN@8";
+"base::BEGIN@4" -> "vars::BEGIN@3";
+"vars::BEGIN@7" -> "warnings::register::import";
+"Try::Tiny::BEGIN@6" -> "vars::import";
+"DBD::SQLite::BEGIN@9" -> "vars::import";
+"Hash::Merge::BEGIN@8" -> "vars::import";
+"List::MoreUtils::BEGIN@8" -> "vars::import";
+"namespace::clean::BEGIN@6" -> "vars::import";
+"Params::Util::BEGIN@65" -> "vars::import";
+"DBD::SQLite::BEGIN@10" -> "vars::import";
+"Data::Compare::BEGIN@12" -> "vars::import";
+"base::BEGIN@4" -> "vars::import";
+"Cwd::BEGIN@5" -> "vars::import";
+"File::Spec::BEGIN@4" -> "vars::import";
+"File::Spec::Unix::BEGIN@4" -> "vars::import";
+"List::Util::BEGIN@12" -> "vars::import";
+"DBD::SQLite::BEGIN@8" -> "vars::import";
+"Scalar::Util::BEGIN@10" -> "vars::import";
+"constant::BEGIN@6" -> "vars::import";
+"vars::import" -> "vars::CORE:match";
+"vars::BEGIN@8" -> "strict::import";
+"base::BEGIN@4" -> "vars::BEGIN@7";
+}

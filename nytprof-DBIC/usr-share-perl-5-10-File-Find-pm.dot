@@ -1,0 +1,79 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+	"Module::Find::_wanted";
+	"Module::Find::_find";
+}
+subgraph cluster_File_Find {
+	label="File::Find";
+	"File::Find::BEGIN@3";
+	"File::Find::BEGIN@2";
+	"File::Find::CORE:stat";
+	"File::Find::BEGIN@4";
+	"File::Find::CORE:open_dir";
+	"File::Find::CORE:readdir";
+	"File::Find::CORE:match";
+	"File::Find::CORE:closedir";
+	"File::Find::BEGIN@424";
+	"File::Find::CORE:ftlink";
+	"File::Find::CORE:regcomp";
+	"File::Find::wrap_wanted";
+	"File::Find::BEGIN@5";
+	"File::Find::CORE:lstat";
+	"File::Find::CORE:subst";
+	"File::Find::Follow_SymLink";
+	"File::Find::CORE:ftdir";
+	"File::Find::find";
+	"File::Find::_find_dir_symlnk";
+	"File::Find::CORE:qr";
+	"File::Find::_find_opt";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_Cwd {
+	label="Cwd";
+	"Cwd::getcwd";
+}
+"File::Find::_find_opt" -> "File::Find::CORE:stat";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:regcomp";
+"Module::Find::BEGIN@8" -> "File::Find::BEGIN@2";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:open_dir";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:closedir";
+"File::Find::find" -> "File::Find::wrap_wanted";
+"Module::Find::BEGIN@8" -> "File::Find::BEGIN@5";
+"File::Find::_find_opt" -> "File::Find::_find_dir_symlnk";
+"Module::Find::BEGIN@8" -> "File::Find::CORE:qr";
+"File::Find::_find_dir_symlnk" -> "Module::Find::_wanted";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:ftdir";
+"File::Find::_find_opt" -> "File::Find::CORE:ftdir";
+"Module::Find::BEGIN@8" -> "File::Find::BEGIN@3";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:readdir";
+"File::Find::_find_opt" -> "File::Find::CORE:subst";
+"File::Find::_find_dir_symlnk" -> "File::Find::Follow_SymLink";
+"File::Find::_find_opt" -> "File::Find::Follow_SymLink";
+"File::Find::BEGIN@5" -> "warnings::register::import";
+"File::Find::find" -> "File::Find::_find_opt";
+"File::Find::Follow_SymLink" -> "File::Find::CORE:lstat";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:lstat";
+"File::Find::Follow_SymLink" -> "File::Find::CORE:ftlink";
+"File::Find::BEGIN@4" -> "warnings::import";
+"Module::Find::_find" -> "File::Find::find";
+"Module::Find::BEGIN@8" -> "File::Find::BEGIN@424";
+"File::Find::_find_opt" -> "Cwd::getcwd";
+"Module::Find::BEGIN@8" -> "File::Find::BEGIN@4";
+"File::Find::_find_dir_symlnk" -> "File::Find::CORE:match";
+"File::Find::BEGIN@424" -> "strict::import";
+"File::Find::BEGIN@3" -> "strict::import";
+}

@@ -1,0 +1,57 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_Relationship_Accessor {
+	label="DBIx::Class::Relationship::Accessor";
+	"DBIx::Class::Relationship::Accessor::register_relationship";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_next {
+	label="next";
+	"next::method";
+}
+subgraph cluster_DBIx_Class_Relationship_ProxyMethods {
+	label="DBIx::Class::Relationship::ProxyMethods";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@25";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@5";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@26";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@6";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@4";
+	"DBIx::Class::Relationship::ProxyMethods::BEGIN@7";
+	"DBIx::Class::Relationship::ProxyMethods::register_relationship";
+}
+subgraph cluster_DBIx_Class_Relationship_Base {
+	label="DBIx::Class::Relationship::Base";
+	"DBIx::Class::Relationship::Base::register_relationship";
+}
+"DBIx::Class::Relationship::ProxyMethods::BEGIN@26" -> "warnings::unimport";
+"DBIx::Class::Relationship::ProxyMethods::register_relationship" -> "DBIx::Class::Relationship::Base::register_relationship";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@6";
+"DBIx::Class::Relationship::Accessor::register_relationship" -> "DBIx::Class::Relationship::ProxyMethods::register_relationship";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@5";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@26";
+"DBIx::Class::Relationship::ProxyMethods::BEGIN@25" -> "strict::unimport";
+"DBIx::Class::Relationship::ProxyMethods::BEGIN@7" -> "base::import";
+"DBIx::Class::Relationship::ProxyMethods::BEGIN@5" -> "warnings::import";
+"DBIx::Class::Relationship::ProxyMethods::register_relationship" -> "next::method";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::ProxyMethods::BEGIN@25";
+"DBIx::Class::Relationship::ProxyMethods::BEGIN@4" -> "strict::import";
+}

@@ -1,0 +1,41 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_Data_OptList {
+	label="Data::OptList";
+	"Data::OptList::__is_a";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::_resolved_attrs";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::inject_base";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@11";
+	"List::Util::first";
+	"List::Util::BEGIN@12";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@11";
+}
+"Package::DeprecationManager::BEGIN@11" -> "List::Util::BEGIN@11";
+"List::Util::first" -> "Data::OptList::__is_a";
+"Package::DeprecationManager::BEGIN@11" -> "List::Util::BEGIN@12";
+"List::Util::BEGIN@12" -> "vars::import";
+"Class::C3::Componentised::inject_base" -> "List::Util::first";
+"DBIx::Class::ResultSet::_resolved_attrs" -> "List::Util::first";
+"Data::OptList::__is_a" -> "List::Util::first";
+"List::Util::BEGIN@11" -> "strict::import";
+}

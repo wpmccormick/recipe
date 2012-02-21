@@ -1,0 +1,26 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::DESTROY";
+	"DBIx::Class::Schema::BEGIN@11";
+}
+subgraph cluster_B {
+	label="B";
+	"B::BEGIN@30";
+	"B::BEGIN@237";
+	"B::svref_2object";
+	"B::BEGIN@12";
+}
+"DBIx::Class::Schema::BEGIN@11" -> "B::BEGIN@237";
+"DBIx::Class::Schema::BEGIN@11" -> "B::BEGIN@12";
+"B::BEGIN@237" -> "strict::unimport";
+"DBIx::Class::Schema::BEGIN@11" -> "B::BEGIN@30";
+"DBIx::Class::Schema::DESTROY" -> "B::svref_2object";
+"B::BEGIN@30" -> "strict::import";
+}

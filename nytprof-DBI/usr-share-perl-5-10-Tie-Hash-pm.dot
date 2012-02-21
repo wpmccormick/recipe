@@ -1,0 +1,24 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@18";
+}
+subgraph cluster_Tie_Hash {
+	label="Tie::Hash";
+	"Tie::Hash::BEGIN@5";
+	"Tie::Hash::BEGIN@6";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+"Tie::Hash::BEGIN@5" -> "Exporter::import";
+"main::BEGIN@18" -> "Tie::Hash::BEGIN@5";
+"main::BEGIN@18" -> "Tie::Hash::BEGIN@6";
+"Tie::Hash::BEGIN@6" -> "warnings::register::import";
+}

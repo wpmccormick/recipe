@@ -1,0 +1,81 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_SQLMaker {
+	label="DBIx::Class::SQLMaker";
+	"DBIx::Class::SQLMaker::select";
+	"DBIx::Class::SQLMaker::_order_by";
+	"DBIx::Class::SQLMaker::_quote";
+	"DBIx::Class::SQLMaker::new";
+	"DBIx::Class::SQLMaker::_table";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_SQL_Abstract {
+	label="SQL::Abstract";
+	"SQL::Abstract::new";
+	"SQL::Abstract::CORE:match";
+	"SQL::Abstract::where";
+	"SQL::Abstract::BEGIN@10";
+	"SQL::Abstract::_METHOD_FOR_refkind";
+	"SQL::Abstract::BEGIN@11";
+	"SQL::Abstract::_refkind";
+	"SQL::Abstract::_sqlcase";
+	"SQL::Abstract::_where_UNDEF";
+	"SQL::Abstract::BEGIN@12";
+	"SQL::Abstract::BEGIN@9";
+	"SQL::Abstract::_quote";
+	"SQL::Abstract::_recurse_where";
+	"SQL::Abstract::CORE:regcomp";
+	"SQL::Abstract::_assert_pass_injection_guard";
+	"SQL::Abstract::_try_refkind";
+	"SQL::Abstract::BEGIN@8";
+	"SQL::Abstract::select";
+	"SQL::Abstract::CORE:qr";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::can";
+}
+"DBIx::Class::SQLMaker::new" -> "SQL::Abstract::new";
+"base::import" -> "SQL::Abstract::BEGIN@12";
+"SQL::Abstract::BEGIN@8" -> "Exporter::import";
+"base::import" -> "SQL::Abstract::BEGIN@9";
+"SQL::Abstract::_quote" -> "SQL::Abstract::_assert_pass_injection_guard";
+"DBIx::Class::SQLMaker::select" -> "SQL::Abstract::select";
+"SQL::Abstract::_assert_pass_injection_guard" -> "SQL::Abstract::CORE:match";
+"base::import" -> "SQL::Abstract::CORE:match";
+"SQL::Abstract::select" -> "DBIx::Class::SQLMaker::_table";
+"SQL::Abstract::_try_refkind" -> "SQL::Abstract::_refkind";
+"SQL::Abstract::_recurse_where" -> "SQL::Abstract::_where_UNDEF";
+"DBIx::Class::SQLMaker::_quote" -> "SQL::Abstract::_quote";
+"SQL::Abstract::where" -> "DBIx::Class::SQLMaker::_order_by";
+"SQL::Abstract::where" -> "SQL::Abstract::_recurse_where";
+"base::import" -> "SQL::Abstract::BEGIN@10";
+"base::import" -> "SQL::Abstract::BEGIN@11";
+"SQL::Abstract::new" -> "SQL::Abstract::CORE:qr";
+"base::import" -> "SQL::Abstract::CORE:qr";
+"SQL::Abstract::select" -> "SQL::Abstract::where";
+"SQL::Abstract::_recurse_where" -> "SQL::Abstract::_METHOD_FOR_refkind";
+"SQL::Abstract::_METHOD_FOR_refkind" -> "UNIVERSAL::can";
+"SQL::Abstract::_METHOD_FOR_refkind" -> "SQL::Abstract::_try_refkind";
+"SQL::Abstract::BEGIN@10" -> "warnings::import";
+"SQL::Abstract::select" -> "SQL::Abstract::_sqlcase";
+"SQL::Abstract::new" -> "SQL::Abstract::CORE:regcomp";
+"SQL::Abstract::_assert_pass_injection_guard" -> "SQL::Abstract::CORE:regcomp";
+"SQL::Abstract::BEGIN@9" -> "strict::import";
+"base::import" -> "SQL::Abstract::BEGIN@8";
+}

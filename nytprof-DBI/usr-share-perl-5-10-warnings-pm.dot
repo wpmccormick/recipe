@@ -1,0 +1,16 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::CORE:regcomp";
+	"warnings::CORE:match";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::BEGIN@186";
+}
+"Exporter::Heavy::BEGIN@186" -> "warnings::unimport";
+"Exporter::Heavy::BEGIN@186" -> "warnings::CORE:match";
+"Exporter::Heavy::BEGIN@186" -> "warnings::CORE:regcomp";
+}

@@ -1,0 +1,54 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_DBIx_Class_Relationship_ProxyMethods {
+	label="DBIx::Class::Relationship::ProxyMethods";
+	"DBIx::Class::Relationship::ProxyMethods::register_relationship";
+}
+subgraph cluster_DBIx_Class_Relationship_Base {
+	label="DBIx::Class::Relationship::Base";
+	"DBIx::Class::Relationship::Base::register_relationship";
+	"DBIx::Class::Relationship::Base::BEGIN@8";
+	"DBIx::Class::Relationship::Base::BEGIN@9";
+	"DBIx::Class::Relationship::Base::BEGIN@4";
+	"DBIx::Class::Relationship::Base::BEGIN@10";
+	"DBIx::Class::Relationship::Base::BEGIN@3";
+	"DBIx::Class::Relationship::Base::BEGIN@6";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+"DBIx::Class::Relationship::Base::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::Relationship::Base::BEGIN@8" -> "Exporter::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@6";
+"DBIx::Class::Relationship::ProxyMethods::register_relationship" -> "DBIx::Class::Relationship::Base::register_relationship";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@9";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@4";
+"DBIx::Class::Relationship::Base::BEGIN@6" -> "base::import";
+"DBIx::Class::Relationship::Base::BEGIN@4" -> "warnings::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Base::BEGIN@8";
+"DBIx::Class::Relationship::Base::BEGIN@10" -> "namespace::clean::import";
+"DBIx::Class::Relationship::Base::BEGIN@3" -> "strict::import";
+}

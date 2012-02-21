@@ -1,0 +1,278 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_ResultSourceProxy_Table {
+	label="DBIx::Class::ResultSourceProxy::Table";
+	"DBIx::Class::ResultSourceProxy::Table::BEGIN@10";
+}
+subgraph cluster_DBIx_Class_SQLMaker {
+	label="DBIx::Class::SQLMaker";
+	"DBIx::Class::SQLMaker::BEGIN@48";
+	"DBIx::Class::SQLMaker::BEGIN@64";
+}
+subgraph cluster_Sub_Exporter {
+	label="Sub::Exporter";
+	"Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_DBIx_Class_AccessorGroup {
+	label="DBIx::Class::AccessorGroup";
+	"DBIx::Class::AccessorGroup::BEGIN@8";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_Sub_Identify {
+	label="Sub::Identify";
+	"Sub::Identify::BEGIN@3";
+	"Sub::Identify::sub_fullname";
+	"Sub::Identify::BEGIN@6";
+	"Sub::Identify::BEGIN@4";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_Variable_Magic {
+	label="Variable::Magic";
+	"Variable::Magic::wizard";
+}
+subgraph cluster_DBIx_Class_Carp {
+	label="DBIx::Class::Carp";
+	"DBIx::Class::Carp::import";
+	"DBIx::Class::Carp::BEGIN@18";
+}
+subgraph cluster_DBIx_Class_Storage_DBIHacks {
+	label="DBIx::Class::Storage::DBIHacks";
+	"DBIx::Class::Storage::DBIHacks::BEGIN@19";
+}
+subgraph cluster_Package_Stash_XS {
+	label="Package::Stash::XS";
+	"Package::Stash::XS::new";
+	"Package::Stash::XS::get_symbol";
+	"Package::Stash::XS::has_symbol";
+	"Package::Stash::XS::list_all_symbols";
+	"Package::Stash::XS::add_symbol";
+	"Package::Stash::XS::name";
+	"Package::Stash::XS::remove_glob";
+	"Package::Stash::XS::namespace";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::BEGIN@22";
+}
+subgraph cluster_DBIx_Class_Storage {
+	label="DBIx::Class::Storage";
+	"DBIx::Class::Storage::BEGIN@19";
+}
+subgraph cluster_Package_Stash {
+	label="Package::Stash";
+	"Package::Stash::BEGIN@48";
+	"Package::Stash::BEGIN@11";
+	"Package::Stash::BEGIN@6";
+	"Package::Stash::BEGIN@5";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::BEGIN@10";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+	"constant::BEGIN@4";
+	"constant::BEGIN@3";
+	"constant::BEGIN@38";
+	"constant::BEGIN@2";
+	"constant::BEGIN@101";
+	"constant::BEGIN@6";
+}
+subgraph cluster_B_Hooks_EndOfScope {
+	label="B::Hooks::EndOfScope";
+	"B::Hooks::EndOfScope::BEGIN@16";
+	"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]";
+	"B::Hooks::EndOfScope::BEGIN@13";
+	"B::Hooks::EndOfScope::BEGIN@14";
+	"B::Hooks::EndOfScope::BEGIN@5";
+	"B::Hooks::EndOfScope::on_scope_end";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_SQLite {
+	label="DBIx::Class::Storage::DBI::SQLite";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@11";
+}
+subgraph cluster_DBIx_Class_Schema {
+	label="DBIx::Class::Schema";
+	"DBIx::Class::Schema::BEGIN@12";
+}
+subgraph cluster_DBIx_Class_Relationship_BelongsTo {
+	label="DBIx::Class::Relationship::BelongsTo";
+	"DBIx::Class::Relationship::BelongsTo::BEGIN@10";
+}
+subgraph cluster_DBIx_Class_Storage_TxnScopeGuard {
+	label="DBIx::Class::Storage::TxnScopeGuard";
+	"DBIx::Class::Storage::TxnScopeGuard::BEGIN@10";
+}
+subgraph cluster_DBIx_Class_Relationship_HasOne {
+	label="DBIx::Class::Relationship::HasOne";
+	"DBIx::Class::Relationship::HasOne::BEGIN@8";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::BEGIN@17";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::__ANON__[Package/DeprecationManager.pm:61]";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::VERSION";
+}
+subgraph cluster_DBIx_Class_Relationship_ManyToMany {
+	label="DBIx::Class::Relationship::ManyToMany";
+	"DBIx::Class::Relationship::ManyToMany::BEGIN@11";
+}
+subgraph cluster_DBIx_Class_ResultSource {
+	label="DBIx::Class::ResultSource";
+	"DBIx::Class::ResultSource::BEGIN@14";
+}
+subgraph cluster_DBIx_Class_Relationship_Base {
+	label="DBIx::Class::Relationship::Base";
+	"DBIx::Class::Relationship::Base::BEGIN@10";
+}
+subgraph cluster_DBIx_Class_SQLMaker_LimitDialects {
+	label="DBIx::Class::SQLMaker::LimitDialects";
+	"DBIx::Class::SQLMaker::LimitDialects::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_Cursor {
+	label="DBIx::Class::Storage::DBI::Cursor";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@9";
+}
+subgraph cluster_DBIx_Class_Relationship_HasMany {
+	label="DBIx::Class::Relationship::HasMany";
+	"DBIx::Class::Relationship::HasMany::BEGIN@7";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::BEGIN@168";
+	"namespace::clean::BEGIN@6";
+	"namespace::clean::BEGIN@14";
+	"namespace::clean::BEGIN@4";
+	"namespace::clean::get_functions";
+	"namespace::clean::BEGIN@467";
+	"namespace::clean::__ANON__[namespace/clean.pm:338]";
+	"namespace::clean::BEGIN@7";
+	"namespace::clean::BEGIN@1";
+	"namespace::clean::__ANON__[namespace/clean.pm:221]";
+	"namespace::clean::BEGIN@171";
+	"namespace::clean::BEGIN@2";
+	"namespace::clean::BEGIN@3";
+	"namespace::clean::clean_subroutines";
+	"namespace::clean::get_class_store";
+	"namespace::clean::BEGIN@169";
+	"namespace::clean::import";
+	"namespace::clean::CORE:match";
+	"namespace::clean::__ANON__[namespace/clean.pm:311]";
+	"namespace::clean::__ANON__[namespace/clean.pm:274]";
+}
+subgraph cluster_DBIx_Class_Row {
+	label="DBIx::Class::Row";
+	"DBIx::Class::Row::BEGIN@24";
+}
+subgraph cluster_DBIx_Class_ResultSourceHandle {
+	label="DBIx::Class::ResultSourceHandle";
+	"DBIx::Class::ResultSourceHandle::BEGIN@11";
+}
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@467";
+"namespace::clean::BEGIN@14" -> "namespace::clean::BEGIN@2";
+"namespace::clean::__ANON__[namespace/clean.pm:221]" -> "Sub::Identify::sub_fullname";
+"namespace::clean::BEGIN@467" -> "warnings::unimport";
+"namespace::clean::BEGIN@7" -> "Package::Stash::BEGIN@5";
+"namespace::clean::__ANON__[namespace/clean.pm:221]" -> "Sub::Identify::BEGIN@6";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@4";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@7";
+"namespace::clean::__ANON__[namespace/clean.pm:274]" -> "Package::Stash::XS::remove_glob";
+"namespace::clean::BEGIN@14" -> "Variable::Magic::wizard";
+"DBIx::Class::SQLMaker::BEGIN@64" -> "namespace::clean::clean_subroutines";
+"namespace::clean::import" -> "namespace::clean::get_class_store";
+"namespace::clean::import" -> "B::Hooks::EndOfScope::on_scope_end";
+"namespace::clean::import" -> "namespace::clean::CORE:match";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@38";
+"namespace::clean::__ANON__[namespace/clean.pm:274]" -> "Package::Stash::XS::namespace";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@3";
+"namespace::clean::import" -> "Package::Stash::XS::has_symbol";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::has_symbol";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@169";
+"namespace::clean::BEGIN@7" -> "Package::DeprecationManager::__ANON__[Package/DeprecationManager.pm:61]";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@13";
+"namespace::clean::__ANON__[namespace/clean.pm:221]" -> "Sub::Identify::BEGIN@3";
+"namespace::clean::__ANON__[namespace/clean.pm:221]" -> "Package::Stash::XS::name";
+"namespace::clean::__ANON__[namespace/clean.pm:274]" -> "namespace::clean::__ANON__[namespace/clean.pm:221]";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@171";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::get_symbol";
+"namespace::clean::__ANON__[namespace/clean.pm:274]" -> "Package::Stash::XS::get_symbol";
+"namespace::clean::get_functions" -> "Package::Stash::XS::get_symbol";
+"namespace::clean::get_functions" -> "Package::Stash::XS::list_all_symbols";
+"namespace::clean::BEGIN@7" -> "Package::Stash::BEGIN@48";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@101";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@14";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@6";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::add_symbol";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@2";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@4";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@6";
+"namespace::clean::BEGIN@168" -> "constant::import";
+"namespace::clean::BEGIN@169" -> "constant::import";
+"namespace::clean::BEGIN@171" -> "strict::unimport";
+"namespace::clean::BEGIN@14" -> "namespace::clean::BEGIN@1";
+"namespace::clean::BEGIN@14" -> "Sub::Exporter::__ANON__[Sub/Exporter.pm:756]";
+"namespace::clean::BEGIN@3" -> "warnings::import";
+"namespace::clean::BEGIN@7" -> "Package::Stash::BEGIN@6";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::clean::__ANON__[namespace/clean.pm:338]";
+"namespace::clean::BEGIN@7" -> "Package::Stash::BEGIN@11";
+"namespace::clean::BEGIN@6" -> "vars::import";
+"namespace::clean::clean_subroutines" -> "namespace::clean::__ANON__[namespace/clean.pm:274]";
+"namespace::clean::__ANON__[namespace/clean.pm:311]" -> "namespace::clean::__ANON__[namespace/clean.pm:274]";
+"namespace::clean::__ANON__[namespace/clean.pm:338]" -> "namespace::clean::__ANON__[namespace/clean.pm:274]";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@16";
+"DBIx::Class::Carp::BEGIN@18" -> "namespace::clean::BEGIN@168";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@3";
+"namespace::clean::import" -> "namespace::clean::get_functions";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@5";
+"namespace::clean::BEGIN@14" -> "B::Hooks::EndOfScope::BEGIN@14";
+"namespace::clean::import" -> "Package::Stash::XS::new";
+"namespace::clean::get_class_store" -> "Package::Stash::XS::new";
+"namespace::clean::get_functions" -> "Package::Stash::XS::new";
+"namespace::clean::__ANON__[namespace/clean.pm:274]" -> "Package::Stash::XS::new";
+"DBIx::Class::SQLMaker::BEGIN@48" -> "namespace::clean::import";
+"DBIx::Class::Relationship::BelongsTo::BEGIN@10" -> "namespace::clean::import";
+"DBIx::Class::AccessorGroup::BEGIN@8" -> "namespace::clean::import";
+"DBIx::Class::ResultSet::BEGIN@22" -> "namespace::clean::import";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@9" -> "namespace::clean::import";
+"DBIx::Class::Storage::DBIHacks::BEGIN@19" -> "namespace::clean::import";
+"DBIx::Class::Relationship::ManyToMany::BEGIN@11" -> "namespace::clean::import";
+"DBIx::Class::ResultSourceHandle::BEGIN@11" -> "namespace::clean::import";
+"DBIx::Class::Storage::DBI::BEGIN@17" -> "namespace::clean::import";
+"DBIx::Class::Relationship::HasOne::BEGIN@8" -> "namespace::clean::import";
+"DBIx::Class::ResultSourceProxy::Table::BEGIN@10" -> "namespace::clean::import";
+"DBIx::Class::Relationship::HasMany::BEGIN@7" -> "namespace::clean::import";
+"DBIx::Class::ResultSourceProxy::BEGIN@10" -> "namespace::clean::import";
+"DBIx::Class::ResultSource::BEGIN@14" -> "namespace::clean::import";
+"DBIx::Class::SQLMaker::LimitDialects::BEGIN@7" -> "namespace::clean::import";
+"DBIx::Class::Schema::BEGIN@12" -> "namespace::clean::import";
+"DBIx::Class::Row::BEGIN@24" -> "namespace::clean::import";
+"DBIx::Class::Carp::import" -> "namespace::clean::import";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@11" -> "namespace::clean::import";
+"DBIx::Class::Relationship::Base::BEGIN@10" -> "namespace::clean::import";
+"DBIx::Class::Storage::BEGIN@19" -> "namespace::clean::import";
+"DBIx::Class::Storage::TxnScopeGuard::BEGIN@10" -> "namespace::clean::import";
+"B::Hooks::EndOfScope::__ANON__[B/Hooks/EndOfScope.pm:26]" -> "namespace::clean::__ANON__[namespace/clean.pm:311]";
+"namespace::clean::BEGIN@14" -> "UNIVERSAL::VERSION";
+"namespace::clean::__ANON__[namespace/clean.pm:221]" -> "UNIVERSAL::VERSION";
+"namespace::clean::BEGIN@4" -> "strict::import";
+"namespace::clean::__ANON__[namespace/clean.pm:221]" -> "Sub::Identify::BEGIN@4";
+}

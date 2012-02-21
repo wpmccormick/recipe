@@ -1,0 +1,125 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Config {
+	label="Config";
+	"Config::BEGIN@35";
+	"Config::BEGIN@5";
+	"Config::BEGIN@9";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@11";
+}
+subgraph cluster_DBI {
+	label="DBI";
+	"DBI::BEGIN@272";
+	"DBI::BEGIN@804";
+	"DBI::BEGIN@534";
+	"DBI::BEGIN@276";
+	"DBI::BEGIN@1035";
+	"DBI::BEGIN@964";
+	"DBI::BEGIN@867";
+	"DBI::BEGIN@691";
+	"DBI::BEGIN@838";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::BEGIN@8";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@3";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::CORE:regcomp";
+	"strict::unimport";
+	"strict::bits";
+	"strict::CORE:match";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::BEGIN@9";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@4";
+}
+subgraph cluster_DBD___st {
+	label="DBD::_::st";
+	"DBD::_::st::BEGIN@1817";
+}
+subgraph cluster_DBD___dr {
+	label="DBD::_::dr";
+	"DBD::_::dr::BEGIN@1450";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::BEGIN@4";
+	"Exporter::Heavy::BEGIN@3";
+}
+subgraph cluster_Time_HiRes {
+	label="Time::HiRes";
+	"Time::HiRes::BEGIN@4";
+	"Time::HiRes::BEGIN@43";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::BEGIN@3";
+	"constant::BEGIN@38";
+	"constant::BEGIN@101";
+}
+subgraph cluster_DBD___common {
+	label="DBD::_::common";
+	"DBD::_::common::BEGIN@1348";
+}
+subgraph cluster_DBD___db {
+	label="DBD::_::db";
+	"DBD::_::db::BEGIN@1511";
+}
+subgraph cluster_AutoLoader {
+	label="AutoLoader";
+	"AutoLoader::BEGIN@138";
+	"AutoLoader::BEGIN@30";
+	"AutoLoader::BEGIN@3";
+	"AutoLoader::BEGIN@186";
+}
+"main::BEGIN@3" -> "strict::CORE:match";
+"strict::unimport" -> "strict::bits";
+"strict::import" -> "strict::bits";
+"main::BEGIN@3" -> "strict::bits";
+"Config::BEGIN@35" -> "strict::unimport";
+"AutoLoader::BEGIN@138" -> "strict::unimport";
+"DBI::BEGIN@804" -> "strict::unimport";
+"constant::BEGIN@38" -> "strict::unimport";
+"DBI::BEGIN@534" -> "strict::unimport";
+"AutoLoader::BEGIN@186" -> "strict::unimport";
+"DBI::BEGIN@1035" -> "strict::unimport";
+"DBI::BEGIN@964" -> "strict::unimport";
+"DBI::BEGIN@691" -> "strict::unimport";
+"DBI::BEGIN@272" -> "strict::unimport";
+"Time::HiRes::BEGIN@43" -> "strict::unimport";
+"Exporter::Heavy::BEGIN@4" -> "strict::unimport";
+"AutoLoader::BEGIN@30" -> "strict::unimport";
+"constant::BEGIN@101" -> "strict::unimport";
+"DBI::BEGIN@867" -> "strict::unimport";
+"DBI::BEGIN@838" -> "strict::unimport";
+"main::BEGIN@3" -> "strict::CORE:regcomp";
+"DBD::_::dr::BEGIN@1450" -> "strict::import";
+"List::Util::BEGIN@11" -> "strict::import";
+"Scalar::Util::BEGIN@9" -> "strict::import";
+"DBD::_::db::BEGIN@1511" -> "strict::import";
+"Config::BEGIN@5" -> "strict::import";
+"constant::BEGIN@3" -> "strict::import";
+"DBD::SQLite::BEGIN@4" -> "strict::import";
+"DBD::_::st::BEGIN@1817" -> "strict::import";
+"vars::BEGIN@8" -> "strict::import";
+"Time::HiRes::BEGIN@4" -> "strict::import";
+"DBI::BEGIN@276" -> "strict::import";
+"DBD::_::common::BEGIN@1348" -> "strict::import";
+"Config::BEGIN@9" -> "strict::import";
+"main::BEGIN@3" -> "strict::import";
+"Exporter::Heavy::BEGIN@3" -> "strict::import";
+"AutoLoader::BEGIN@3" -> "strict::import";
+}

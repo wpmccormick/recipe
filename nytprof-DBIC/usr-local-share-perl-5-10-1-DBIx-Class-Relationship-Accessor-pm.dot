@@ -1,0 +1,59 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_Relationship_Accessor {
+	label="DBIx::Class::Relationship::Accessor";
+	"DBIx::Class::Relationship::Accessor::BEGIN@72";
+	"DBIx::Class::Relationship::Accessor::BEGIN@4";
+	"DBIx::Class::Relationship::Accessor::BEGIN@6";
+	"DBIx::Class::Relationship::Accessor::add_relationship_accessor";
+	"DBIx::Class::Relationship::Accessor::register_relationship";
+	"DBIx::Class::Relationship::Accessor::BEGIN@73";
+	"DBIx::Class::Relationship::Accessor::BEGIN@5";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::relationship_info";
+	"DBIx::Class::ResultSourceProxy::add_relationship";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_next {
+	label="next";
+	"next::method";
+}
+subgraph cluster_DBIx_Class_Relationship_ProxyMethods {
+	label="DBIx::Class::Relationship::ProxyMethods";
+	"DBIx::Class::Relationship::ProxyMethods::register_relationship";
+}
+subgraph cluster_Sub_Name {
+	label="Sub::Name";
+	"Sub::Name::subname";
+}
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@72";
+"DBIx::Class::Relationship::Accessor::BEGIN@73" -> "warnings::unimport";
+"DBIx::Class::Relationship::Accessor::add_relationship_accessor" -> "DBIx::Class::ResultSourceProxy::relationship_info";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@5";
+"DBIx::Class::Relationship::Accessor::add_relationship_accessor" -> "Sub::Name::subname";
+"DBIx::Class::Relationship::Accessor::register_relationship" -> "DBIx::Class::Relationship::ProxyMethods::register_relationship";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@6";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@73";
+"DBIx::Class::Relationship::Accessor::BEGIN@72" -> "strict::unimport";
+"DBIx::Class::Relationship::Accessor::BEGIN@5" -> "warnings::import";
+"DBIx::Class::Relationship::Accessor::register_relationship" -> "next::method";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::Accessor::BEGIN@4";
+"DBIx::Class::ResultSourceProxy::add_relationship" -> "DBIx::Class::Relationship::Accessor::register_relationship";
+"DBIx::Class::Relationship::Accessor::register_relationship" -> "DBIx::Class::Relationship::Accessor::add_relationship_accessor";
+"DBIx::Class::Relationship::Accessor::BEGIN@4" -> "strict::import";
+}

@@ -1,0 +1,63 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Internals {
+	label="Internals";
+	"Internals::SvREADONLY";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_constant {
+	label="constant";
+	"constant::import";
+	"constant::BEGIN@4";
+	"constant::BEGIN@3";
+	"constant::BEGIN@38";
+	"constant::CORE:regcomp";
+	"constant::BEGIN@101";
+	"constant::BEGIN@2";
+	"constant::BEGIN@6";
+	"constant::CORE:match";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::method_changed_in";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@30";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::BEGIN@168";
+	"namespace::clean::BEGIN@169";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+"constant::import" -> "mro::method_changed_in";
+"constant::import" -> "constant::CORE:regcomp";
+"constant::import" -> "Internals::SvREADONLY";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@38";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@101";
+"constant::BEGIN@4" -> "warnings::register::import";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@2";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@4";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@6";
+"namespace::clean::BEGIN@168" -> "constant::import";
+"DBD::SQLite::BEGIN@30" -> "constant::import";
+"namespace::clean::BEGIN@169" -> "constant::import";
+"constant::BEGIN@38" -> "strict::unimport";
+"constant::BEGIN@101" -> "strict::unimport";
+"constant::BEGIN@6" -> "vars::import";
+"namespace::clean::BEGIN@168" -> "constant::BEGIN@3";
+"constant::import" -> "constant::CORE:match";
+"constant::BEGIN@3" -> "strict::import";
+}

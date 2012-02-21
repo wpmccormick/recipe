@@ -1,0 +1,85 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::_construct_object";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::add_columns";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_Accessor_Grouped {
+	label="Class::Accessor::Grouped";
+	"Class::Accessor::Grouped::mk_group_accessors";
+}
+subgraph cluster_FibeRio_Schema_Result_Recipe {
+	label="FibeRio::Schema::Result::Recipe";
+	"FibeRio::Schema::Result::Recipe::NAME";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+subgraph cluster_DBIx_Class_Row {
+	label="DBIx::Class::Row";
+	"DBIx::Class::Row::get_column";
+	"DBIx::Class::Row::BEGIN@8";
+	"DBIx::Class::Row::BEGIN@3";
+	"DBIx::Class::Row::BEGIN@17";
+	"DBIx::Class::Row::BEGIN@10";
+	"DBIx::Class::Row::BEGIN@4";
+	"DBIx::Class::Row::BEGIN@24";
+	"DBIx::Class::Row::BEGIN@343";
+	"DBIx::Class::Row::inflate_result";
+	"DBIx::Class::Row::BEGIN@6";
+	"DBIx::Class::Row::BEGIN@9";
+	"DBIx::Class::Row::in_storage";
+	"DBIx::Class::Row::register_column";
+	"DBIx::Class::Row::BEGIN@11";
+}
+"DBIx::Class::ResultSet::_construct_object" -> "DBIx::Class::Row::inflate_result";
+"base::import" -> "DBIx::Class::Row::BEGIN@4";
+"DBIx::Class::Row::BEGIN@9" -> "Exporter::import";
+"DBIx::Class::Row::BEGIN@10" -> "Exporter::import";
+"DBIx::Class::Row::BEGIN@11" -> "Exporter::import";
+"DBIx::Class::Row::BEGIN@343" -> "warnings::unimport";
+"base::import" -> "DBIx::Class::Row::BEGIN@6";
+"base::import" -> "DBIx::Class::Row::BEGIN@11";
+"base::import" -> "DBIx::Class::Row::BEGIN@3";
+"DBIx::Class::Row::register_column" -> "Class::Accessor::Grouped::mk_group_accessors";
+"base::import" -> "DBIx::Class::Row::BEGIN@343";
+"base::import" -> "DBIx::Class::Row::BEGIN@9";
+"DBIx::Class::ResultSourceProxy::add_columns" -> "DBIx::Class::Row::register_column";
+"DBIx::Class::Row::BEGIN@6" -> "base::import";
+"DBIx::Class::Row::inflate_result" -> "UNIVERSAL::isa";
+"DBIx::Class::Row::inflate_result" -> "DBIx::Class::Row::in_storage";
+"base::import" -> "DBIx::Class::Row::BEGIN@8";
+"DBIx::Class::Row::BEGIN@4" -> "warnings::import";
+"base::import" -> "DBIx::Class::Row::BEGIN@24";
+"FibeRio::Schema::Result::Recipe::NAME" -> "DBIx::Class::Row::get_column";
+"base::import" -> "DBIx::Class::Row::BEGIN@10";
+"base::import" -> "DBIx::Class::Row::BEGIN@17";
+"DBIx::Class::Row::BEGIN@24" -> "namespace::clean::import";
+"DBIx::Class::Row::BEGIN@3" -> "strict::import";
+}

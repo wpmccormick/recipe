@@ -1,0 +1,98 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_Carp {
+	label="DBIx::Class::Carp";
+	"DBIx::Class::Carp::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::import";
+}
+subgraph cluster_next {
+	label="next";
+	"next::method";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_SQLite {
+	label="DBIx::Class::Storage::DBI::SQLite";
+	"DBIx::Class::Storage::DBI::SQLite::debug";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@6";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@3";
+	"DBIx::Class::Storage::DBI::SQLite::_conn_pid";
+	"DBIx::Class::Storage::DBI::SQLite::unsafe";
+	"DBIx::Class::Storage::DBI::SQLite::_dbh_autocommit";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@4";
+	"DBIx::Class::Storage::DBI::SQLite::on_connect_do";
+	"DBIx::Class::Storage::DBI::SQLite::disable_sth_caching";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@11";
+	"DBIx::Class::Storage::DBI::SQLite::_dbi_attrs_for_bind";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@9";
+	"DBIx::Class::Storage::DBI::SQLite::on_connect_call";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@10";
+	"DBIx::Class::Storage::DBI::SQLite::BEGIN@7";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::_populate_dbh";
+	"DBIx::Class::Storage::DBI::_dbh_sth";
+	"DBIx::Class::Storage::DBI::_run_connection_actions";
+	"DBIx::Class::Storage::DBI::_dbi_attrs_for_bind";
+	"DBIx::Class::Storage::DBI::_parse_connect_do";
+	"DBIx::Class::Storage::DBI::_verify_pid";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]";
+	"DBIx::Class::Storage::DBI::_execute";
+	"DBIx::Class::Storage::DBI::_connect";
+	"DBIx::Class::Storage::DBI::_query_start";
+	"DBIx::Class::Storage::DBI::_query_end";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+"DBIx::Class::Storage::DBI::_populate_dbh" -> "DBIx::Class::Storage::DBI::SQLite::_conn_pid";
+"DBIx::Class::Storage::DBI::_verify_pid" -> "DBIx::Class::Storage::DBI::SQLite::_conn_pid";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@10" -> "Exporter::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@4";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@11";
+"DBIx::Class::Storage::DBI::_execute" -> "DBIx::Class::Storage::DBI::SQLite::_dbi_attrs_for_bind";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@9";
+"DBIx::Class::Storage::DBI::_query_start" -> "DBIx::Class::Storage::DBI::SQLite::debug";
+"DBIx::Class::Storage::DBI::_query_end" -> "DBIx::Class::Storage::DBI::SQLite::debug";
+"DBIx::Class::Storage::DBI::_run_connection_actions" -> "DBIx::Class::Storage::DBI::SQLite::on_connect_call";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@10";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@7";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@3";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@9" -> "DBIx::Class::Carp::import";
+"DBIx::Class::Storage::DBI::SQLite::_dbi_attrs_for_bind" -> "DBIx::Class::Storage::DBI::_dbi_attrs_for_bind";
+"DBIx::Class::Storage::DBI::_populate_dbh" -> "DBIx::Class::Storage::DBI::SQLite::_dbh_autocommit";
+"DBIx::Class::Storage::DBI::_connect" -> "DBIx::Class::Storage::DBI::SQLite::_dbh_autocommit";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@6" -> "base::import";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@4" -> "warnings::import";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@7" -> "mro::import";
+"DBIx::Class::Storage::DBI::SQLite::_dbi_attrs_for_bind" -> "next::method";
+"DBIx::Class::Storage::DBI::_dbh_sth" -> "DBIx::Class::Storage::DBI::SQLite::disable_sth_caching";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBIx::Class::Storage::DBI::SQLite::unsafe";
+"DBIx::Class::Storage::DBI::_parse_connect_do" -> "DBIx::Class::Storage::DBI::SQLite::on_connect_do";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::SQLite::BEGIN@6";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@11" -> "namespace::clean::import";
+"DBIx::Class::Storage::DBI::SQLite::BEGIN@3" -> "strict::import";
+}

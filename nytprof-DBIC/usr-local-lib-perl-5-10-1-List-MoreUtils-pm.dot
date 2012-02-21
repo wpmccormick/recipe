@@ -1,0 +1,39 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_List_MoreUtils {
+	label="List::MoreUtils";
+	"List::MoreUtils::BEGIN@4";
+	"List::MoreUtils::BEGIN@3";
+	"List::MoreUtils::BEGIN@6";
+	"List::MoreUtils::BEGIN@8";
+	"List::MoreUtils::BEGIN@5";
+	"List::MoreUtils::BEGIN@9";
+	"List::MoreUtils::bootstrap";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Package_DeprecationManager {
+	label="Package::DeprecationManager";
+	"Package::DeprecationManager::BEGIN@10";
+}
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@4";
+"List::MoreUtils::BEGIN@9" -> "DynaLoader::bootstrap";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@5";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@8";
+"DynaLoader::bootstrap" -> "List::MoreUtils::bootstrap";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@6";
+"List::MoreUtils::BEGIN@8" -> "vars::import";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@9";
+"Package::DeprecationManager::BEGIN@10" -> "List::MoreUtils::BEGIN@3";
+"List::MoreUtils::BEGIN@4" -> "strict::import";
+}

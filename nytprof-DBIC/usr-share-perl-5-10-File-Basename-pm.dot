@@ -1,0 +1,45 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Module_Find {
+	label="Module::Find";
+	"Module::Find::BEGIN@8";
+}
+subgraph cluster_File_Basename {
+	label="File::Basename";
+	"File::Basename::BEGIN@52";
+	"File::Basename::BEGIN@371";
+	"File::Basename::BEGIN@50";
+	"File::Basename::fileparse_set_fstype";
+	"File::Basename::CORE:regcomp";
+	"File::Basename::CORE:match";
+	"File::Basename::BEGIN@43";
+	"File::Basename::BEGIN@51";
+}
+subgraph cluster_re {
+	label="re";
+	"re::BEGIN@4";
+	"re::import";
+	"re::BEGIN@5";
+}
+"Module::Find::BEGIN@8" -> "File::Basename::BEGIN@51";
+"Module::Find::BEGIN@8" -> "File::Basename::BEGIN@371";
+"Module::Find::BEGIN@8" -> "File::Basename::BEGIN@50";
+"File::Basename::BEGIN@43" -> "re::BEGIN@5";
+"File::Basename::fileparse_set_fstype" -> "File::Basename::CORE:regcomp";
+"File::Basename::fileparse_set_fstype" -> "File::Basename::CORE:match";
+"Module::Find::BEGIN@8" -> "File::Basename::BEGIN@52";
+"Module::Find::BEGIN@8" -> "File::Basename::fileparse_set_fstype";
+"Module::Find::BEGIN@8" -> "File::Basename::BEGIN@43";
+"File::Basename::BEGIN@52" -> "warnings::import";
+"File::Basename::BEGIN@43" -> "re::import";
+"File::Basename::BEGIN@43" -> "re::BEGIN@4";
+"File::Basename::BEGIN@50" -> "strict::import";
+}

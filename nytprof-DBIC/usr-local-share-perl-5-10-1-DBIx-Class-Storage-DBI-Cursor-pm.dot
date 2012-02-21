@@ -1,0 +1,85 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_ResultSet {
+	label="DBIx::Class::ResultSet";
+	"DBIx::Class::ResultSet::all";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_DBI_st {
+	label="DBI::st";
+	"DBI::st::fetchall_arrayref";
+}
+subgraph cluster_main {
+	label="main";
+	"main::RUNTIME";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::_select";
+	"DBIx::Class::Storage::DBI::select";
+	"DBIx::Class::Storage::DBI::dbh_do";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:790]";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::can";
+}
+subgraph cluster_DBIx_Class_Storage_DBI_Cursor {
+	label="DBIx::Class::Storage::DBI::Cursor";
+	"DBIx::Class::Storage::DBI::Cursor::new";
+	"DBIx::Class::Storage::DBI::Cursor::DESTROY";
+	"DBIx::Class::Storage::DBI::Cursor::_check_dbh_gen";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@6";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@9";
+	"DBIx::Class::Storage::DBI::Cursor::all";
+	"DBIx::Class::Storage::DBI::Cursor::_dbh_all";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@3";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@8";
+	"DBIx::Class::Storage::DBI::Cursor::BEGIN@4";
+	"DBIx::Class::Storage::DBI::Cursor::sth";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+"DBIx::Class::Storage::DBI::Cursor::_dbh_all" -> "DBI::st::fetchall_arrayref";
+"DBIx::Class::Storage::DBI::Cursor::DESTROY" -> "DBIx::Class::Storage::DBI::Cursor::sth";
+"DBIx::Class::Storage::DBI::Cursor::_dbh_all" -> "DBIx::Class::Storage::DBI::Cursor::sth";
+"DBIx::Class::Storage::DBI::Cursor::_dbh_all" -> "DBIx::Class::Storage::DBI::Cursor::_check_dbh_gen";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@8" -> "Exporter::import";
+"main::RUNTIME" -> "DBIx::Class::Storage::DBI::Cursor::DESTROY";
+"DBIx::Class::Storage::DBI::select" -> "DBIx::Class::Storage::DBI::Cursor::new";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@3";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@6";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:790]" -> "DBIx::Class::Storage::DBI::Cursor::_dbh_all";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@8";
+"DBIx::Class::ResultSet::all" -> "DBIx::Class::Storage::DBI::Cursor::all";
+"DBIx::Class::Storage::DBI::Cursor::all" -> "UNIVERSAL::can";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@9";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@6" -> "base::import";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@4" -> "warnings::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Storage::DBI::Cursor::BEGIN@4";
+"DBIx::Class::Storage::DBI::Cursor::_dbh_all" -> "DBIx::Class::Storage::DBI::_select";
+"DBIx::Class::Storage::DBI::Cursor::all" -> "DBIx::Class::Storage::DBI::dbh_do";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@9" -> "namespace::clean::import";
+"DBIx::Class::Storage::DBI::Cursor::BEGIN@3" -> "strict::import";
+}

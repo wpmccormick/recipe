@@ -1,0 +1,122 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DBIx_Class_SQLMaker {
+	label="DBIx::Class::SQLMaker";
+	"DBIx::Class::SQLMaker::BEGIN@48";
+	"DBIx::Class::SQLMaker::_recurse_from";
+	"DBIx::Class::SQLMaker::BEGIN@64";
+	"DBIx::Class::SQLMaker::new";
+	"DBIx::Class::SQLMaker::_table";
+	"DBIx::Class::SQLMaker::BEGIN@38";
+	"DBIx::Class::SQLMaker::BEGIN@46";
+	"DBIx::Class::SQLMaker::BEGIN@43";
+	"DBIx::Class::SQLMaker::BEGIN@45";
+	"DBIx::Class::SQLMaker::select";
+	"DBIx::Class::SQLMaker::_parse_rs_attrs";
+	"DBIx::Class::SQLMaker::BEGIN@3";
+	"DBIx::Class::SQLMaker::BEGIN@47";
+	"DBIx::Class::SQLMaker::_quote";
+	"DBIx::Class::SQLMaker::BEGIN@67";
+	"DBIx::Class::SQLMaker::CORE:qr";
+	"DBIx::Class::SQLMaker::BEGIN@4";
+	"DBIx::Class::SQLMaker::_gen_from_blocks";
+	"DBIx::Class::SQLMaker::_from_chunk_to_sql";
+	"DBIx::Class::SQLMaker::_order_by";
+	"DBIx::Class::SQLMaker::_assemble_binds";
+	"DBIx::Class::SQLMaker::_recurse_fields";
+	"DBIx::Class::SQLMaker::CORE:match";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::unimport";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_Carp {
+	label="DBIx::Class::Carp";
+	"DBIx::Class::Carp::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_mro {
+	label="mro";
+	"mro::import";
+}
+subgraph cluster_next {
+	label="next";
+	"next::method";
+}
+subgraph cluster_SQL_Abstract {
+	label="SQL::Abstract";
+	"SQL::Abstract::_quote";
+	"SQL::Abstract::new";
+	"SQL::Abstract::where";
+	"SQL::Abstract::select";
+}
+subgraph cluster_Sub_Name {
+	label="Sub::Name";
+	"Sub::Name::subname";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::sql_maker";
+	"DBIx::Class::Storage::DBI::_gen_sql_bind";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+	"namespace::clean::clean_subroutines";
+}
+"DBIx::Class::SQLMaker::new" -> "SQL::Abstract::new";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@43";
+"DBIx::Class::SQLMaker::_order_by" -> "DBIx::Class::SQLMaker::_parse_rs_attrs";
+"DBIx::Class::SQLMaker::_recurse_from" -> "DBIx::Class::SQLMaker::_gen_from_blocks";
+"DBIx::Class::SQLMaker::BEGIN@45" -> "Exporter::import";
+"DBIx::Class::SQLMaker::BEGIN@67" -> "warnings::unimport";
+"DBIx::Class::SQLMaker::BEGIN@64" -> "namespace::clean::clean_subroutines";
+"DBIx::Class::SQLMaker::select" -> "DBIx::Class::SQLMaker::_assemble_binds";
+"DBIx::Class::SQLMaker::select" -> "SQL::Abstract::select";
+"SQL::Abstract::select" -> "DBIx::Class::SQLMaker::_table";
+"DBIx::Class::SQLMaker::BEGIN@64" -> "Sub::Name::subname";
+"DBIx::Class::SQLMaker::_quote" -> "SQL::Abstract::_quote";
+"SQL::Abstract::where" -> "DBIx::Class::SQLMaker::_order_by";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@48";
+"DBIx::Class::SQLMaker::_table" -> "DBIx::Class::SQLMaker::_recurse_from";
+"DBIx::Class::Storage::DBI::sql_maker" -> "DBIx::Class::SQLMaker::new";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@46";
+"DBIx::Class::SQLMaker::BEGIN@46" -> "DBIx::Class::Carp::import";
+"DBIx::Class::SQLMaker::_recurse_fields" -> "DBIx::Class::SQLMaker::_quote";
+"DBIx::Class::SQLMaker::_from_chunk_to_sql" -> "DBIx::Class::SQLMaker::_quote";
+"DBIx::Class::SQLMaker::new" -> "DBIx::Class::SQLMaker::CORE:qr";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@64";
+"DBIx::Class::SQLMaker::BEGIN@38" -> "base::import";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@38";
+"DBIx::Class::SQLMaker::BEGIN@4" -> "warnings::import";
+"DBIx::Class::SQLMaker::BEGIN@43" -> "mro::import";
+"DBIx::Class::SQLMaker::_gen_from_blocks" -> "DBIx::Class::SQLMaker::_from_chunk_to_sql";
+"DBIx::Class::SQLMaker::_from_chunk_to_sql" -> "DBIx::Class::SQLMaker::_from_chunk_to_sql";
+"DBIx::Class::SQLMaker::select" -> "DBIx::Class::SQLMaker::_recurse_fields";
+"DBIx::Class::SQLMaker::_recurse_fields" -> "DBIx::Class::SQLMaker::_recurse_fields";
+"DBIx::Class::SQLMaker::_order_by" -> "DBIx::Class::SQLMaker::CORE:match";
+"DBIx::Class::SQLMaker::_from_chunk_to_sql" -> "DBIx::Class::SQLMaker::CORE:match";
+"DBIx::Class::SQLMaker::select" -> "next::method";
+"DBIx::Class::SQLMaker::_quote" -> "next::method";
+"DBIx::Class::SQLMaker::new" -> "next::method";
+"DBIx::Class::Storage::DBI::_gen_sql_bind" -> "DBIx::Class::SQLMaker::select";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@45";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@3";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@67";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@47";
+"base::import" -> "DBIx::Class::SQLMaker::BEGIN@4";
+"DBIx::Class::SQLMaker::BEGIN@48" -> "namespace::clean::import";
+"DBIx::Class::SQLMaker::BEGIN@3" -> "strict::import";
+}

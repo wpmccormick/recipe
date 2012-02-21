@@ -1,0 +1,63 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_DBIx_Class_ResultSourceProxy {
+	label="DBIx::Class::ResultSourceProxy";
+	"DBIx::Class::ResultSourceProxy::_pri_cols";
+	"DBIx::Class::ResultSourceProxy::columns";
+	"DBIx::Class::ResultSourceProxy::has_column";
+	"DBIx::Class::ResultSourceProxy::add_relationship";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_C3_Componentised {
+	label="Class::C3::Componentised";
+	"Class::C3::Componentised::ensure_class_loaded";
+}
+subgraph cluster_Try_Tiny {
+	label="Try::Tiny";
+	"Try::Tiny::catch";
+	"Try::Tiny::try";
+}
+subgraph cluster_namespace_clean {
+	label="namespace::clean";
+	"namespace::clean::import";
+}
+subgraph cluster_DBIx_Class_Relationship_HasMany {
+	label="DBIx::Class::Relationship::HasMany";
+	"DBIx::Class::Relationship::HasMany::BEGIN@5";
+	"DBIx::Class::Relationship::HasMany::has_many";
+	"DBIx::Class::Relationship::HasMany::BEGIN@4";
+	"DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:44]";
+	"DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:19]";
+	"DBIx::Class::Relationship::HasMany::BEGIN@6";
+	"DBIx::Class::Relationship::HasMany::BEGIN@7";
+}
+"DBIx::Class::Relationship::HasMany::has_many" -> "Try::Tiny::try";
+"DBIx::Class::Relationship::HasMany::BEGIN@6" -> "Exporter::import";
+"Try::Tiny::try" -> "DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:19]";
+"Try::Tiny::try" -> "DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:44]";
+"DBIx::Class::Relationship::HasMany::has_many" -> "DBIx::Class::ResultSourceProxy::add_relationship";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@4";
+"DBIx::Class::Relationship::HasMany::has_many" -> "Class::C3::Componentised::ensure_class_loaded";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@5";
+"DBIx::Class::Relationship::HasMany::has_many" -> "Try::Tiny::catch";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@7";
+"DBIx::Class::Relationship::HasMany::has_many" -> "DBIx::Class::ResultSourceProxy::has_column";
+"DBIx::Class::Relationship::HasMany::BEGIN@5" -> "warnings::import";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::has_many";
+"DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:19]" -> "DBIx::Class::ResultSourceProxy::_pri_cols";
+"DBIx::Class::Relationship::HasMany::__ANON__[DBIx/Class/Relationship/HasMany.pm:44]" -> "DBIx::Class::ResultSourceProxy::columns";
+"Class::C3::Componentised::ensure_class_loaded" -> "DBIx::Class::Relationship::HasMany::BEGIN@6";
+"DBIx::Class::Relationship::HasMany::BEGIN@7" -> "namespace::clean::import";
+"DBIx::Class::Relationship::HasMany::BEGIN@4" -> "strict::import";
+}

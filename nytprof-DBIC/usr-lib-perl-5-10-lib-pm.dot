@@ -1,0 +1,36 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_Config {
+	label="Config";
+	"Config::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_main {
+	label="main";
+	"main::BEGIN@7";
+}
+subgraph cluster_lib {
+	label="lib";
+	"lib::BEGIN@6";
+	"lib::CORE:ftis";
+	"lib::_get_dirs";
+	"lib::BEGIN@8";
+	"lib::CORE:match";
+	"lib::_nativize";
+	"lib::CORE:ftdir";
+	"lib::import";
+}
+"lib::BEGIN@6" -> "Config::import";
+"lib::import" -> "lib::_get_dirs";
+"lib::import" -> "lib::_nativize";
+"lib::import" -> "lib::CORE:ftis";
+"main::BEGIN@7" -> "lib::BEGIN@8";
+"lib::import" -> "lib::CORE:match";
+"main::BEGIN@7" -> "lib::BEGIN@6";
+"main::BEGIN@7" -> "lib::import";
+"lib::BEGIN@8" -> "strict::import";
+"lib::import" -> "lib::CORE:ftdir";
+}

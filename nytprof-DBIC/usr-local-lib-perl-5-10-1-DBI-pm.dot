@@ -1,0 +1,229 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_DBI {
+	label="DBI";
+	"DBI::__ANON__[DBI.pm:732]";
+	"DBI::BEGIN@163";
+	"DBI::BEGIN@160";
+	"DBI::BEGIN@804";
+	"DBI::BEGIN@534";
+	"DBI::BEGIN@161";
+	"DBI::BEGIN@159";
+	"DBI::bootstrap";
+	"DBI::BEGIN@276";
+	"DBI::setup_driver";
+	"DBI::BEGIN@1035";
+	"DBI::CORE:match";
+	"DBI::BEGIN@964";
+	"DBI::_new_handle";
+	"DBI::BEGIN@691";
+	"DBI::_new_sth";
+	"DBI::BEGIN@272";
+	"DBI::END";
+	"DBI::_concat_hash_sorted";
+	"DBI::_install_method";
+	"DBI::_new_dbh";
+	"DBI::install_driver";
+	"DBI::disconnect_all";
+	"DBI::CORE:subst";
+	"DBI::_new_drh";
+	"DBI::BEGIN@867";
+	"DBI::connect";
+	"DBI::BEGIN@838";
+}
+subgraph cluster_Tie_Hash {
+	label="Tie::Hash";
+	"Tie::Hash::BEGIN@5";
+	"Tie::Hash::BEGIN@6";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_DBD_SQLite_dr {
+	label="DBD::SQLite::dr";
+	"DBD::SQLite::dr::connect";
+	"DBD::SQLite::dr::BEGIN@178";
+}
+subgraph cluster_DBI_common {
+	label="DBI::common";
+	"DBI::common::STORE";
+}
+subgraph cluster_DBD_SQLite_db {
+	label="DBD::SQLite::db";
+	"DBD::SQLite::db::prepare";
+}
+subgraph cluster_DBD___st {
+	label="DBD::_::st";
+	"DBD::_::st::BEGIN@1817";
+}
+subgraph cluster_DBI_var {
+	label="DBI::var";
+	"DBI::var::TIESCALAR";
+}
+subgraph cluster_Exporter_Heavy {
+	label="Exporter::Heavy";
+	"Exporter::Heavy::heavy_export_ok_tags";
+}
+subgraph cluster_DBI_dr {
+	label="DBI::dr";
+	"DBI::dr::disconnect_all";
+	"DBI::dr::default_user";
+	"DBI::dr::connect";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::export_ok_tags";
+}
+subgraph cluster_DBD___common {
+	label="DBD::_::common";
+	"DBD::_::common::CORE:match";
+	"DBD::_::common::BEGIN@1348";
+	"DBD::_::common::trace_msg";
+	"DBD::_::common::install_method";
+}
+subgraph cluster_main {
+	label="main";
+	"main::RUNTIME";
+}
+subgraph cluster_DBI_db {
+	label="DBI::db";
+	"DBI::db::connected";
+	"DBI::db::prepare";
+	"DBI::db::prepare_cached";
+}
+subgraph cluster_DBIx_Class_Storage_DBI {
+	label="DBIx::Class::Storage::DBI";
+	"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]";
+	"DBIx::Class::Storage::DBI::BEGIN@11.1";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+}
+subgraph cluster_DBD_SQLite {
+	label="DBD::SQLite";
+	"DBD::SQLite::BEGIN@9";
+	"DBD::SQLite::BEGIN@34";
+	"DBD::SQLite::BEGIN@3";
+	"DBD::SQLite::BEGIN@4";
+	"DBD::SQLite::BEGIN@10";
+	"DBD::SQLite::BEGIN@6";
+	"DBD::SQLite::BEGIN@12";
+	"DBD::SQLite::BEGIN@30";
+	"DBD::SQLite::driver";
+	"DBD::SQLite::BEGIN@8";
+	"DBD::SQLite::BEGIN@5";
+}
+subgraph cluster_DBD___dr {
+	label="DBD::_::dr";
+	"DBD::_::dr::BEGIN@1450";
+	"DBD::_::dr::default_user";
+}
+subgraph cluster_DBI_DBI_tie {
+	label="DBI::DBI_tie";
+	"DBI::DBI_tie::TIEHASH";
+}
+subgraph cluster_DBD_SQLite__WriteOnceHash {
+	label="DBD::SQLite::_WriteOnceHash";
+	"DBD::SQLite::_WriteOnceHash::STORE";
+	"DBD::SQLite::_WriteOnceHash::TIEHASH";
+}
+subgraph cluster_DBD___db {
+	label="DBD::_::db";
+	"DBD::_::db::BEGIN@1511";
+	"DBD::_::db::prepare_cached";
+}
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@964";
+"main::RUNTIME" -> "DBI::END";
+"DBI::connect" -> "DBI::dr::default_user";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBD::_::common::BEGIN@1348";
+"DBI::install_driver" -> "DynaLoader::bootstrap";
+"DBI::BEGIN@163" -> "DynaLoader::bootstrap";
+"DBI::db::prepare_cached" -> "DBD::_::db::prepare_cached";
+"DBI::BEGIN@163" -> "Exporter::Heavy::heavy_export_ok_tags";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@804";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@161";
+"DBI::disconnect_all" -> "DBI::dr::disconnect_all";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@12";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::var::TIESCALAR";
+"DBD::_::db::prepare_cached" -> "DBI::db::prepare";
+"DBD::SQLite::driver" -> "DBD::_::common::install_method";
+"DBD::_::db::prepare_cached" -> "DBI::_concat_hash_sorted";
+"DBD::SQLite::dr::connect" -> "DBI::_new_dbh";
+"DBI::install_driver" -> "Tie::Hash::BEGIN@6";
+"DBI::install_driver" -> "DBD::SQLite::driver";
+"DBD::SQLite::driver" -> "DBI::_new_drh";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@8";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBD::_::dr::BEGIN@1450";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBD::_::db::BEGIN@1511";
+"DBI::BEGIN@163" -> "Exporter::export_ok_tags";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@691";
+"DBI::install_driver" -> "DBI::CORE:subst";
+"DBI::connect" -> "DBI::CORE:subst";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@838";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@5";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@3";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::setup_driver";
+"DBI::install_driver" -> "DBI::setup_driver";
+"DBD::SQLite::driver" -> "DBI::setup_driver";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@276";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBIx::Class::Storage::DBI::BEGIN@11.1";
+"DBI::install_driver" -> "DBD::SQLite::_WriteOnceHash::STORE";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@867";
+"DBI::connect" -> "DBI::__ANON__[DBI.pm:732]";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@160";
+"DBD::_::common::install_method" -> "DBD::_::common::CORE:match";
+"DBI::__ANON__[DBI.pm:732]" -> "DBI::db::connected";
+"DBI::dr::default_user" -> "DBD::_::dr::default_user";
+"DBD::SQLite::db::prepare" -> "DBI::_new_sth";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::DBI_tie::TIEHASH";
+"DBI::connect" -> "DBI::install_driver";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@9";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@34";
+"DBI::BEGIN@964" -> "strict::unimport";
+"DBI::BEGIN@691" -> "strict::unimport";
+"DBI::BEGIN@838" -> "strict::unimport";
+"DBI::BEGIN@804" -> "strict::unimport";
+"DBI::BEGIN@534" -> "strict::unimport";
+"DBI::BEGIN@1035" -> "strict::unimport";
+"DBI::BEGIN@272" -> "strict::unimport";
+"DBI::BEGIN@867" -> "strict::unimport";
+"DBI::install_driver" -> "Tie::Hash::BEGIN@5";
+"DBI::setup_driver" -> "UNIVERSAL::isa";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@4";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@272";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBD::_::st::BEGIN@1817";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::_install_method";
+"DBD::_::common::install_method" -> "DBI::_install_method";
+"DBI::END" -> "DBI::disconnect_all";
+"DBI::install_driver" -> "DBD::SQLite::dr::BEGIN@178";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@163";
+"DBI::END" -> "DBD::_::common::trace_msg";
+"DynaLoader::bootstrap" -> "DBI::bootstrap";
+"DBI::BEGIN@163" -> "DBI::CORE:match";
+"DBI::install_driver" -> "DBD::SQLite::_WriteOnceHash::TIEHASH";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::connect";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@10";
+"DBI::__ANON__[DBI.pm:732]" -> "DBI::dr::connect";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@534";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@6";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@159";
+"DBI::install_driver" -> "DBD::SQLite::BEGIN@30";
+"DBIx::Class::Storage::DBI::__ANON__[DBIx/Class/Storage/DBI.pm:1300]" -> "DBI::BEGIN@1035";
+"DBI::_new_dbh" -> "DBI::_new_handle";
+"DBI::_new_sth" -> "DBI::_new_handle";
+"DBI::_new_drh" -> "DBI::_new_handle";
+"DBD::_::common::BEGIN@1348" -> "strict::import";
+"DBD::_::st::BEGIN@1817" -> "strict::import";
+"DBD::_::dr::BEGIN@1450" -> "strict::import";
+"DBD::_::db::BEGIN@1511" -> "strict::import";
+"DBI::BEGIN@276" -> "strict::import";
+"DBI::__ANON__[DBI.pm:732]" -> "DBI::common::STORE";
+"DBI::connect" -> "DBI::common::STORE";
+}
